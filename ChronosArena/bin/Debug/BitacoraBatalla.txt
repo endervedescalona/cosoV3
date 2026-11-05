@@ -1,0 +1,21 @@
+﻿==================================
+         CHRONOS ARENA
+==================================
+Fecha: 05/11/2026 16:19:47
+Ganador: IA
+
+EQUIPO DEL JUGADOR:
+- Magnus
+- Fiona
+- Elara
+- Seraphyn
+- Ranmaru
+
+EQUIPO DE LA IA:
+- Cedrid
+- Ranmaru
+- Magnus
+- Vessel
+- Fiona
+
+
