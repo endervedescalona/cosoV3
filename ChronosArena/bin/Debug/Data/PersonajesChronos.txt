@@ -1,0 +1,13 @@
+# Nombre|Faccion|Elemento|Clase|Vida|Ataque|Defensa|Energia|Mana|Empatia|Habilidad
+Hanzo|Homura|Fuego|Guerrero|110|35|40|50|30|5|Corte Flameante
+Seraphyn|Homura|Fuego|Mago|85|18|20|20|90|10|Ráfaga de Incendio
+Magnus|Homura|Fuego|Tanque|180|22|65|40|35|5|Escudo Magmático
+Fiona|Mizushiro|Agua|Guerrero|115|40|35|45|35|8|Estocada Torrencial
+Elara|Mizushiro|Agua|Mago|90|16|15|15|100|15|Prisión Helada
+Ranmaru|Mizushiro|Agua|Tanque|200|20|60|35|35|10|Marea Defensiva
+Vessel|Kazekiri|Aire|Tanque|160|25|58|50|35|8|Barrera de Viento
+Ibuki|Kazekiri|Aire|Mago|120|12|22|20|80|40|Soplido Sanador
+Leo|Kazekiri|Aire|Guerrero|105|30|45|60|35|5|Tornados Cruzados
+Cedrid|Daichi|Tierra|Tanque|240|18|70|30|35|12|Fortaleza Terrenal
+Tobias|Daichi|Tierra|Mago|135|14|25|15|85|48|Raíz del Bosque
+Tessho|Daichi|Tierra|Guerrero|100|42|32|40|35|6|Impacto Sólido

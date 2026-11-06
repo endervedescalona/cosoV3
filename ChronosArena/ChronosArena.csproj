@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{08446B09-0182-4E65-8F9A-CBE640AB265A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ChronosArena</RootNamespace>
+    <AssemblyName>ChronosArena</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AdaptadorPantalla.cs" />
+    <Compile Include="Model\Personaje.cs" />
+    <Compile Include="Model\ClasesHijas.cs" />
+    <Compile Include="Model\Jugador.cs" />
+    <Compile Include="Logic\GestorMazo.cs" />
+    <Compile Include="Logic\GestorBatalla.cs" />
+    <Compile Include="Logic\NucleoBatalla.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBatalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBatalla.Designer.cs">
+      <DependentUpon>FormBatalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCartas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCartas.Designer.cs">
+      <DependentUpon>FormCartas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormModoJuego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormModoJuego.Designer.cs">
+      <DependentUpon>FormModoJuego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSeleccionMazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSeleccionMazo.Designer.cs">
+      <DependentUpon>FormSeleccionMazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormVentanaReglas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormVentanaReglas.Designer.cs">
+      <DependentUpon>FormVentanaReglas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormBatalla.resx">
+      <DependentUpon>FormBatalla.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCartas.resx">
+      <DependentUpon>FormCartas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormModoJuego.resx">
+      <DependentUpon>FormModoJuego.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSeleccionMazo.resx">
+      <DependentUpon>FormSeleccionMazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormVentanaReglas.resx">
+      <DependentUpon>FormVentanaReglas.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Data\PersonajesChronos.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\imagenes_chronos.txt.example">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

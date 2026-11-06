@@ -1,0 +1,14 @@
+C:\Users\k\Desktop\ChronosArena\bin\Debug\Data\PersonajesChronos.txt
+C:\Users\k\Desktop\ChronosArena\bin\Debug\Data\imagenes_chronos.txt.example
+C:\Users\k\Desktop\ChronosArena\bin\Debug\ChronosArena.exe
+C:\Users\k\Desktop\ChronosArena\bin\Debug\ChronosArena.pdb
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.csprojResolveAssemblyReference.cache
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.FormBatalla.resources
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.FormCartas.resources
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.FormModoJuego.resources
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.FormSeleccionMazo.resources
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.FormVentanaReglas.resources
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.MainForm.resources
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.csproj.GenerateResource.Cache
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.exe
+C:\Users\k\Desktop\ChronosArena\obj\Debug\ChronosArena.pdb
