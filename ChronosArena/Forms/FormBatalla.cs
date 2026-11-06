@@ -48,7 +48,7 @@ namespace ChronosArena
             }
         }
 
-        // Constructor sin parámetros requerido por el diseñador visual.
+
         public FormBatalla()
         {
             InitializeComponent();
