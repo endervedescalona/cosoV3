@@ -5,11 +5,7 @@ using System.Windows.Forms;
 
 namespace ChronosArena
 {
-    /// <summary>
-    /// Permite alternar entre ventana y pantalla completa con F11.
-    /// Escape restaura el tamaño y los bordes originales.
-    /// Compatible con .NET Framework 4.0.
-    /// </summary>
+   
     internal sealed class PantallaCompleta
     {
         private readonly Form formulario;
@@ -96,11 +92,7 @@ namespace ChronosArena
         }
     }
 
-    /// <summary>
-    /// Escala los controles de un formulario manteniendo sus proporciones
-    /// cuando el usuario cambia el tamaño de la ventana o usa F11.
-    /// Los controles Docked conservan su comportamiento nativo.
-    /// </summary>
+   
     internal sealed class EscaladorInterfaz
     {
         private readonly Form formulario;
@@ -194,7 +186,7 @@ namespace ChronosArena
             float ajusteX = (float)formulario.ClientSize.Width / tamanoBase.Width;
             float ajusteY = (float)formulario.ClientSize.Height / tamanoBase.Height;
 
-            // Escala uniforme: evita deformar la distribución de la interfaz.
+       
             escalaX = Math.Min(ajusteX, ajusteY);
             escalaY = escalaX;
             escalaFuente = escalaX;
