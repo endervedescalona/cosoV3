@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="Forms\AdaptadorPantalla.cs" />
     <Compile Include="Logic\CargadorLocal.cs" />
+    <Compile Include="Model\Ambiente.cs" />
     <Compile Include="Model\Personaje.cs" />
     <Compile Include="Model\ClasesHijas.cs" />
     <Compile Include="Model\Jugador.cs" />

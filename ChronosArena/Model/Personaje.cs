@@ -7,7 +7,9 @@ namespace ChronosArena
     /// Centraliza atributos comunes y reglas compartidas del combate.
     /// </summary>
     public abstract class Personaje
-    {
+    {	
+    	public int CargasEspecial { get; set; }
+		public int CargasRequeridas { get; set; } = 2;
         public string Nombre { get; private set; }
         public string Faccion { get; private set; }
         public string Elemento { get; private set; }
