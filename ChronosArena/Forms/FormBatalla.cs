@@ -124,7 +124,7 @@ namespace ChronosArena
             try
             {
                 if (!String.IsNullOrWhiteSpace(url))
-                    picFondo.LoadAsync(url);
+                    CargadorLocal.CargarImagen(picFondo, System.IO.Path.GetFileName(url));
             }
             catch (Exception)
             {
@@ -237,7 +237,7 @@ namespace ChronosArena
 
             try
             {
-                cuadro.LoadAsync(url);
+                CargadorLocal.CargarImagen(cuadro, System.IO.Path.GetFileName(url));
             }
             catch
             {

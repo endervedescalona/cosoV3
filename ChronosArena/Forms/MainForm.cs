@@ -28,7 +28,7 @@ namespace ChronosArena
             CargarFondo();
         }
 
-        private void CargarFondo()
+        /*private void CargarFondo() //OCULTA POKE AJA//
         {
             picFondo.BackColor = Color.FromArgb(20, 25, 38);
             try
@@ -50,6 +50,31 @@ namespace ChronosArena
                 picFondo.Image = null;
             }
         }
+        */
+       
+       
+		private void CargarFondo()
+		{
+			picFondo.BackColor = Color.FromArgb(20, 25, 38);
+			try
+    		{
+        		string url;
+        		Dictionary<string, string> urls = GestorMazo.ObtenerUrls();
+        		if (urls.TryGetValue("fondo:menu", out url) && !String.IsNullOrWhiteSpace(url))
+        		{
+            			string nombreArchivo = System.IO.Path.GetFileName(url);
+           				 CargadorLocal.CargarImagen(picFondo, nombreArchivo);
+        		}
+        		else
+       		 	{
+            		picFondo.Image = null;
+        		}
+   			 }
+    		catch (Exception)
+    		{
+        picFondo.Image = null;
+    	}
+	}
 
         private void PicFondo_LoadCompleted(
             object sender,

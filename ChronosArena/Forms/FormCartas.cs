@@ -92,7 +92,7 @@ namespace ChronosArena
                 if (urls.TryGetValue("fondo:clan:" + clan, out url)
                     && !String.IsNullOrWhiteSpace(url))
                 {
-                    fondo.LoadAsync(url);
+                    CargadorLocal.CargarImagen(fondo, System.IO.Path.GetFileName(url));
                 }
             }
             catch

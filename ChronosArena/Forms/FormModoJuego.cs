@@ -34,7 +34,7 @@ namespace ChronosArena
                     "fondo:modo", out url) &&
                     !String.IsNullOrWhiteSpace(url))
                 {
-                    picFondo.LoadAsync(url);
+                    CargadorLocal.CargarImagen(picFondo, System.IO.Path.GetFileName(url));
                 }
             }
             catch

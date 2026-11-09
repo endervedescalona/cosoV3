@@ -109,7 +109,7 @@ namespace ChronosArena
 
             try
             {
-                picReverso.LoadAsync(urlReverso);
+                CargadorLocal.CargarImagen(picReverso, System.IO.Path.GetFileName(urlReverso));
             }
             catch
             {
@@ -128,7 +128,7 @@ namespace ChronosArena
 
             try
             {
-                picReverso.LoadAsync(url);
+                CargadorLocal.CargarImagen(picReverso, System.IO.Path.GetFileName(url));
 
                 urlVistaPreviaActual = url;
             }
@@ -264,7 +264,7 @@ namespace ChronosArena
             {
                 try
                 {
-                    foto.LoadAsync(p.ImagenUrl);
+                    CargadorLocal.CargarImagen(foto, System.IO.Path.GetFileName(p.ImagenUrl));
                 }
                 catch
                 {

@@ -1,0 +1,52 @@
+﻿==================================================
+CHRONOS ARENA - REGISTRO DE PARTIDA
+==================================================
+Fecha: 09/11/2026 05:40:23
+Ganador: IA
+
+EQUIPO DEL JUGADOR:
+- Hanzo | Clase: Guerrero | Vida final: 110/110
+- Seraphyn | Clase: Mago | Vida final: 85/85
+- Fiona | Clase: Guerrero | Vida final: 115/115
+- Elara | Clase: Mago | Vida final: 90/90
+- Vessel | Clase: Tanque | Vida final: 160/160
+
+EQUIPO DE LA IA:
+- Leo | Clase: Guerrero | Vida final: 105/105
+- Ibuki | Clase: Mago | Vida final: 120/120
+- Tobias | Clase: Mago | Vida final: 135/135
+- Ranmaru | Clase: Tanque | Vida final: 200/200
+- Cedrid | Clase: Tanque | Vida final: 240/240
+
+ACCIONES DE LA PARTIDA:
+05:40:13 - La batalla de Chronos Arena ha comenzado.
+05:40:13 - Tienes 30 segundos para realizar tu acción.
+05:40:23 - El jugador se ha rendido. La computadora gana.
+
+==================================================
+CHRONOS ARENA - REGISTRO DE PARTIDA
+==================================================
+Fecha: 09/11/2026 05:54:38
+Ganador: Interrumpida
+
+EQUIPO DEL JUGADOR:
+- Ibuki | Clase: Mago | Vida final: 110/120
+- Seraphyn | Clase: Mago | Vida final: 85/85
+- Elara | Clase: Mago | Vida final: 90/90
+- Ranmaru | Clase: Tanque | Vida final: 200/200
+- Cedrid | Clase: Tanque | Vida final: 240/240
+
+EQUIPO DE LA IA:
+- Tobias | Clase: Mago | Vida final: 135/135
+- Tessho | Clase: Guerrero | Vida final: 100/100
+- Leo | Clase: Guerrero | Vida final: 105/105
+- Magnus | Clase: Tanque | Vida final: 180/180
+- Hanzo | Clase: Guerrero | Vida final: 110/110
+
+ACCIONES DE LA PARTIDA:
+05:53:57 - La batalla de Chronos Arena ha comenzado.
+05:53:57 - Tienes 30 segundos para realizar tu acción.
+05:54:27 - Se agotó el tiempo. El jugador pierde su turno.
+05:54:28 - La computadora ataca con Tobias e inflige 10 de daño.
+05:54:38 - La ventana se cerró antes de finalizar. Partida interrumpida.
+
