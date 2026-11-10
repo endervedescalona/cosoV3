@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,6 +11,7 @@ namespace ChronosArena
     public class NucleoBatalla
     {
         public int DuracionTurnoSegundos { get; private set; }
+        public CartaAmbiente AmbienteActivo { get; set; }
 
         public NucleoBatalla()
         {
@@ -23,7 +24,7 @@ namespace ChronosArena
             if (!PuedeUsarEnergia(atacante, 10))
                 return 0;
 
-            return atacante.Atacar(objetivo);
+            return atacante.Atacar(objetivo, AmbienteActivo);
         }
 
         public string EjecutarHabilidad(Personaje usuario, Personaje objetivo)
@@ -31,6 +32,7 @@ namespace ChronosArena
             if (usuario == null) throw new ArgumentNullException("usuario");
             if (usuario.Mana < 20)
                 return usuario.Nombre + " no tiene suficiente maná (necesita 20).";
+            usuario.AmbienteActivo = AmbienteActivo;
             return usuario.UsarHabilidad(objetivo);
         }
 

@@ -86,7 +86,7 @@ namespace ChronosArena
         	this.btnLocal.Name = "btnLocal";
         	this.btnLocal.Size = new System.Drawing.Size(320, 45);
         	this.btnLocal.TabIndex = 3;
-        	this.btnLocal.Text = "PLAYER VS COM";
+        	this.btnLocal.Text = "PLAYER VS COMP";
         	this.btnLocal.UseVisualStyleBackColor = false;
         	this.btnLocal.Click += new System.EventHandler(this.BtnLocal_Click);
         	// 
@@ -116,7 +116,7 @@ namespace ChronosArena
         	this.btnOnline.Name = "btnOnline";
         	this.btnOnline.Size = new System.Drawing.Size(320, 45);
         	this.btnOnline.TabIndex = 5;
-        	this.btnOnline.Text = "ONLINE MODE";
+        	this.btnOnline.Text = "EN LINEA";
         	this.btnOnline.UseVisualStyleBackColor = false;
         	this.btnOnline.Click += new System.EventHandler(this.BtnOnline_Click);
         	// 
@@ -131,7 +131,7 @@ namespace ChronosArena
         	this.btnAtras.Name = "btnAtras";
         	this.btnAtras.Size = new System.Drawing.Size(220, 38);
         	this.btnAtras.TabIndex = 6;
-        	this.btnAtras.Text = "VOLVER AL MENU";
+        	this.btnAtras.Text = "ATRAS";
         	this.btnAtras.UseVisualStyleBackColor = false;
         	this.btnAtras.Click += new System.EventHandler(this.BtnAtras_Click);
         	// 
@@ -141,17 +141,14 @@ namespace ChronosArena
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         	this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(35)))));
         	this.ClientSize = new System.Drawing.Size(930, 521);
-        	this.Controls.Add(this.picFondo);
         	this.Controls.Add(this.lblTitulo);
         	this.Controls.Add(this.lblSubtitulo);
         	this.Controls.Add(this.btnLocal);
         	this.Controls.Add(this.btnDosJugadores);
         	this.Controls.Add(this.btnOnline);
         	this.Controls.Add(this.btnAtras);
-        this.Controls.SetChildIndex(this.picFondo, this.Controls.Count - 1);
+        	this.Controls.Add(this.picFondo);
         	this.Font = new System.Drawing.Font("Courier New", 10F);
-        	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-        	this.MaximizeBox = true;
         	this.MinimumSize = new System.Drawing.Size(936, 549);
         	this.Name = "FormModoJuego";
         	this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

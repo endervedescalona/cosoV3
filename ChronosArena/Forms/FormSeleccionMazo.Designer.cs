@@ -145,7 +145,6 @@ namespace ChronosArena
         	// lstMazoIA
         	// 
         	this.lstMazoIA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-        	this.lstMazoIA.Enabled = false;
         	this.lstMazoIA.Font = new System.Drawing.Font("Courier New", 8F);
         	this.lstMazoIA.ForeColor = System.Drawing.Color.White;
         	this.lstMazoIA.ItemHeight = 14;
@@ -153,6 +152,7 @@ namespace ChronosArena
         	this.lstMazoIA.Name = "lstMazoIA";
         	this.lstMazoIA.Size = new System.Drawing.Size(135, 116);
         	this.lstMazoIA.TabIndex = 9;
+        	this.lstMazoIA.SelectedIndexChanged += new System.EventHandler(this.LstMazoIASelectedIndexChanged);
         	// 
         	// btnElegir
         	// 

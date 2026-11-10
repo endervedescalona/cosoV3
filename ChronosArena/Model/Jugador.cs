@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ChronosArena
 {
@@ -10,7 +10,7 @@ namespace ChronosArena
 
         public Jugador(string nombre)
         {
-            Nombre = nombre ?? "Jugador";
+            Nombre = nombre != null ? nombre : "Jugador";
             MazoSeleccionado = new List<Personaje>();
         }
 

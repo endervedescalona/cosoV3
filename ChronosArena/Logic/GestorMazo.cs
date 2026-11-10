@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -129,7 +129,7 @@ namespace ChronosArena
 
         private static string LimpiarCampo(string valor)
         {
-            return (valor ?? String.Empty).Replace("|", "/").Replace("\r", " ").Replace("\n", " ").Trim();
+            return (valor != null ? valor : String.Empty).Replace("|", "/").Replace("\r", " ").Replace("\n", " ").Trim();
         }
 
         private static Personaje CrearPersonaje(
@@ -155,26 +155,26 @@ namespace ChronosArena
         public static Dictionary<string, string> ObtenerUrls()
         {
             Dictionary<string, string> urls = new Dictionary<string, string>();
-            urls["fondo:menu"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/MAIN_MENU.jpg";
-            urls["fondo:modo"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/GAME_MODE.jpg";
-            urls["reverso:carta"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/CARDBACK.jpeg";
-            urls["fondo:batalla"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/ARENA.jpeg";
-            urls["fondo:clan:Mizushiro"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/NEOMIZU.jpeg";
-            urls["fondo:clan:Kazekiri"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/OLIMPUS.jpeg";
-            urls["fondo:clan:Homura"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/VELLIGNIS.jpeg";
-            urls["fondo:clan:Daichi"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/BRANCHES.jpeg";
-            urls["personaje:Cedrid"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/DAICHI_CEDRID.jpg.jpeg";
-            urls["personaje:Tessho"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/DAICHI_TESSHO.jpeg";
-            urls["personaje:Tobias"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/DAICHI_TOBIAS.jpeg";
-            urls["personaje:Hanzo"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/HOMURA_HANZO.jpeg";
-            urls["personaje:Magnus"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/HOMURA_MAGNUS.jpeg";
-            urls["personaje:Seraphyn"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/HOMURA_SERAPHYN.jpg.jpeg";
-            urls["personaje:Ibuki"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/KAZEKIRI_IBUKI.jpeg";
-            urls["personaje:Leo"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/KAZEKIRI_LEO.jpeg";
-            urls["personaje:Vessel"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/KAZEKIRI_VESSEL.jpeg";
-            urls["personaje:Elara"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/MIZUSHIRO_ELARA.jpeg";
-            urls["personaje:Fiona"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/MIZUSHIRO_FIONA.jpeg";
-            urls["personaje:Ranmaru"] = "https://raw.githubusercontent.com/VedzabethCortez/ART_PACK/main/pictures/MIZUSHIRO_RANMARU.jpeg";
+            urls["fondo:menu"] = "MAIN_MENU.jpg";
+            urls["fondo:modo"] = "GAME_MODE.jpg";
+            urls["reverso:carta"] = "CARDBACK.jpeg";
+            urls["fondo:batalla"] = "ARENA.jpeg";
+            urls["fondo:clan:Mizushiro"] = "NEOMIZU.jpeg";
+            urls["fondo:clan:Kazekiri"] = "OLIMPUS.jpeg";
+            urls["fondo:clan:Homura"] = "VELLIGNIS.jpeg";
+            urls["fondo:clan:Daichi"] = "BRANCHES.jpeg";
+            urls["personaje:Cedrid"] = "DAICHI_CEDRID.jpg";
+            urls["personaje:Tessho"] = "DAICHI_TESSHO.jpg";
+            urls["personaje:Tobias"] = "DAICHI_TOBIAS.jpg";
+            urls["personaje:Hanzo"] = "HOMURA_HANZO.jpg";
+            urls["personaje:Magnus"] = "HOMURA_MAGNUS.jpg";
+            urls["personaje:Seraphyn"] = "HOMURA_SERAPHYN.jpg";
+            urls["personaje:Ibuki"] = "KAZEKIRI_IBUKI.jpg";
+            urls["personaje:Leo"] = "KAZEKIRI_LEO.jpg";
+            urls["personaje:Vessel"] = "KAZEKIRI_VESSEL.jpg";
+            urls["personaje:Elara"] = "MIZUSHIRO_ELARA.jpg";
+            urls["personaje:Fiona"] = "MIZUSHIRO_FIONA.jpg";
+            urls["personaje:Ranmaru"] = "MIZUSHIRO_RANMARU.jpg";
 
             try
             {
@@ -207,7 +207,7 @@ namespace ChronosArena
             List<string> lineas = new List<string>();
             foreach (KeyValuePair<string, string> par in urls)
             {
-                string valor = (par.Value ?? String.Empty).Replace("\r", "").Replace("\n", "");
+                string valor = (par.Value != null ? par.Value : String.Empty).Replace("\r", "").Replace("\n", "");
                 lineas.Add(par.Key + "|" + valor);
             }
 

@@ -12,6 +12,7 @@ namespace ChronosArena
         public MainForm()
         {
             InitializeComponent();
+            DoubleBuffered = true;
             PantallaCompleta.Instalar(this);
             EscaladorInterfaz.Instalar(this);
             picFondo.LoadCompleted += PicFondo_LoadCompleted;
@@ -28,7 +29,7 @@ namespace ChronosArena
             CargarFondo();
         }
 
-        /*private void CargarFondo() //OCULTA POKE AJA//
+        private void CargarFondo()
         {
             picFondo.BackColor = Color.FromArgb(20, 25, 38);
             try
@@ -38,7 +39,7 @@ namespace ChronosArena
                 if (urls.TryGetValue("fondo:menu", out url) &&
                     !String.IsNullOrWhiteSpace(url))
                 {
-                    picFondo.LoadAsync(url);
+                    CargadorLocal.CargarImagen(picFondo, System.IO.Path.GetFileName(url));
                 }
                 else
                 {
@@ -50,31 +51,6 @@ namespace ChronosArena
                 picFondo.Image = null;
             }
         }
-        */
-       
-       
-		private void CargarFondo()
-		{
-			picFondo.BackColor = Color.FromArgb(20, 25, 38);
-			try
-    		{
-        		string url;
-        		Dictionary<string, string> urls = GestorMazo.ObtenerUrls();
-        		if (urls.TryGetValue("fondo:menu", out url) && !String.IsNullOrWhiteSpace(url))
-        		{
-            			string nombreArchivo = System.IO.Path.GetFileName(url);
-           				 CargadorLocal.CargarImagen(picFondo, nombreArchivo);
-        		}
-        		else
-       		 	{
-            		picFondo.Image = null;
-        		}
-   			 }
-    		catch (Exception)
-    		{
-        picFondo.Image = null;
-    	}
-	}
 
         private void PicFondo_LoadCompleted(
             object sender,
@@ -95,16 +71,80 @@ namespace ChronosArena
                     return;
             }
 
-            using (FormSeleccionMazo selector = new FormSeleccionMazo())
+            try
             {
-                if (selector.ShowDialog(this) == DialogResult.OK)
+                // Si el usuario pulsa ATRAS en la preparación, vuelve a la
+                // selección del mazo, no se pierde directamente al menú.
+                while (true)
                 {
-                    using (FormBatalla batalla = new FormBatalla(
-                        selector.MazoJugador, selector.MazoIA))
+                    List<Personaje> equipo1;
+                    List<Personaje> equipo2;
+
+                    using (FormSeleccionMazo selector = new FormSeleccionMazo())
                     {
-                        batalla.ShowDialog(this);
+                        if (selector.ShowDialog(this) != DialogResult.OK)
+                            return;
+
+                        if (PartidaConfig.EsOnline)
+                        {
+                            GestorRed red = PartidaConfig.Red;
+                            equipo1 = red.EsAnfitrion ? selector.MazoJugador : selector.MazoIA;
+                            equipo2 = red.EsAnfitrion ? selector.MazoIA : selector.MazoJugador;
+                        }
+                        else
+                        {
+                            equipo1 = selector.MazoJugador;
+                            equipo2 = selector.MazoIA;
+                        }
                     }
+
+                    bool ambienteConfirmado = false;
+                    bool volverSeleccionMazo = false;
+                    while (!ambienteConfirmado)
+                    {
+                        using (FormPrePartida preparacion = new FormPrePartida())
+                        {
+                            if (preparacion.ShowDialog(this) != DialogResult.OK)
+                            {
+                                if (PartidaConfig.EsOnline)
+                                    return;
+                                volverSeleccionMazo = true;
+                                break;
+                            }
+
+                            PartidaConfig.NombreJugador1 = preparacion.NombreJugador1;
+                            PartidaConfig.NombreJugador2 = preparacion.NombreJugador2;
+                            PartidaConfig.EquipoInicial = preparacion.EquipoComienza;
+                        }
+
+                        using (FormSeleccionAmbiente ambiente = new FormSeleccionAmbiente(PartidaConfig.EquipoInicial))
+                        {
+                            DialogResult resultadoAmbiente = ambiente.ShowDialog(this);
+                            if (resultadoAmbiente == DialogResult.OK)
+                                ambienteConfirmado = true;
+                            else if (PartidaConfig.EsOnline)
+                                return; // la conexión se cancela en ambos equipos
+                            // En modo local, ATRAS vuelve a la fase de dados.
+                        }
+                    }
+
+                    if (volverSeleccionMazo)
+                        continue;
+
+                    FormBatalla batalla;
+                    if (PartidaConfig.EsOnline)
+                        batalla = new FormBatalla(equipo1, equipo2, PartidaConfig.Red);
+                    else
+                        batalla = new FormBatalla(equipo1, equipo2);
+
+                    using (batalla)
+                        batalla.ShowDialog(this);
+                    break;
                 }
+            }
+            finally
+            {
+                PartidaConfig.Reiniciar();
             }
         }
 

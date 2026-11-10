@@ -8,6 +8,7 @@ namespace ChronosArena
         public FormVentanaReglas()
         {
             InitializeComponent();
+            DoubleBuffered = true;
             PantallaCompleta.Instalar(this);
             EscaladorInterfaz.Instalar(this);
         }

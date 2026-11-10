@@ -37,6 +37,7 @@ namespace ChronosArena
         public FormCartas()
         {
             InitializeComponent();
+            DoubleBuffered = true;
             PantallaCompleta.Instalar(this);
             EscaladorInterfaz.Instalar(this);
 

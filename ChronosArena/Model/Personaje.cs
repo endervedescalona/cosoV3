@@ -7,9 +7,7 @@ namespace ChronosArena
     /// Centraliza atributos comunes y reglas compartidas del combate.
     /// </summary>
     public abstract class Personaje
-    {	
-    	public int CargasEspecial { get; set; }
-		public int CargasRequeridas { get; set; } = 2;
+    {
         public string Nombre { get; private set; }
         public string Faccion { get; private set; }
         public string Elemento { get; private set; }
@@ -24,6 +22,10 @@ namespace ChronosArena
         public int Empatia { get; private set; }
         public string HabilidadEspecial { get; private set; }
         public string ImagenUrl { get; private set; }
+        public int CargasEspecial { get; private set; }
+        public const int CargasRequeridas = 2;
+        internal CartaAmbiente AmbienteActivo { get; set; }
+        private bool efectosAmbienteAplicados;
 
         protected Personaje(
             string nombre,
@@ -38,10 +40,10 @@ namespace ChronosArena
             int empatia,
             string habilidad)
         {
-            Nombre = nombre ?? String.Empty;
-            Faccion = faccion ?? String.Empty;
-            Elemento = elemento ?? String.Empty;
-            Clase = clase ?? String.Empty;
+            Nombre = nombre != null ? nombre : String.Empty;
+            Faccion = faccion != null ? faccion : String.Empty;
+            Elemento = elemento != null ? elemento : String.Empty;
+            Clase = clase != null ? clase : String.Empty;
 
             VidaMax = Math.Max(1, vida);
             Vida = VidaMax;
@@ -52,8 +54,11 @@ namespace ChronosArena
             Mana = Math.Max(0, Math.Min(100, mana));
             Empatia = Math.Max(0, empatia);
 
-            HabilidadEspecial = habilidad ?? String.Empty;
+            HabilidadEspecial = habilidad != null ? habilidad : String.Empty;
             ImagenUrl = String.Empty;
+            CargasEspecial = 0;
+            AmbienteActivo = null;
+            efectosAmbienteAplicados = false;
         }
 
         /// <summary>
@@ -71,11 +76,8 @@ namespace ChronosArena
             return Vida > 0 && Energia >= 10;
         }
 
-        public int Atacar(Personaje objetivo)
+        public int EstimarDanoAtaque(Personaje objetivo)
         {
-            if (objetivo == null || objetivo.Vida <= 0 || !PuedeAtacar())
-                return 0;
-
             int ataqueReal = Ataque;
 
             if ((Elemento == "Fuego" && objetivo.Elemento == "Aire") ||
@@ -88,11 +90,52 @@ namespace ChronosArena
 
             // La defensa reduce el daño, pero nunca lo anula: cada ataque
             // normal debe producir una variación visible en la barra de vida.
-            int dano = Math.Max(8, ataqueReal - objetivo.Defensa / 5);
+            return Math.Max(8, ataqueReal - objetivo.Defensa / 5);
+        }
+
+        public int Atacar(Personaje objetivo)
+        {
+            return Atacar(objetivo, AmbienteActivo);
+        }
+
+        public int Atacar(Personaje objetivo, CartaAmbiente ambiente)
+        {
+            if (objetivo == null || objetivo.Vida <= 0 || !PuedeAtacar())
+                return 0;
+
+            int dano = EstimarDanoAtaque(objetivo);
+            if (ambiente != null)
+                dano = ambiente.CalcularDanoConAmbiente(dano, Faccion);
             objetivo.RecibirDano(dano);
             Energia = Math.Max(0, Energia - 10);
-
             return dano;
+        }
+
+        public void CargarEspecial()
+        {
+            CargasEspecial = Math.Min(CargasRequeridas, CargasEspecial + 1);
+        }
+
+        public bool PuedeUsarEspecial()
+        {
+            return CargasEspecial >= CargasRequeridas;
+        }
+
+        public void ConsumirCargaEspecial()
+        {
+            CargasEspecial = 0;
+        }
+
+        internal void AplicarModificadoresAmbiente(int bonusVida, int bonusDefensa)
+        {
+            if (efectosAmbienteAplicados)
+                return;
+
+            VidaMax = Math.Max(1, VidaMax + bonusVida);
+            Vida = Math.Max(1, Math.Min(VidaMax, Vida + bonusVida));
+            Defensa = Math.Max(0, Defensa + bonusDefensa);
+            DefensaBase = Math.Max(0, DefensaBase + bonusDefensa);
+            efectosAmbienteAplicados = true;
         }
 
         public string UsarHabilidad(Personaje objetivo)
@@ -150,6 +193,8 @@ namespace ChronosArena
 
             int divisor = Math.Max(1, divisorDefensa);
             int dano = Math.Max(10, poder - objetivo.Defensa / divisor);
+            if (AmbienteActivo != null)
+                dano = AmbienteActivo.CalcularDanoConAmbiente(dano, Faccion);
             objetivo.RecibirDano(dano);
             return dano;
         }
@@ -204,6 +249,9 @@ namespace ChronosArena
             copia.Defensa = Defensa;
             copia.Energia = Energia;
             copia.Mana = Mana;
+            copia.CargasEspecial = CargasEspecial;
+            copia.AmbienteActivo = AmbienteActivo;
+            copia.efectosAmbienteAplicados = efectosAmbienteAplicados;
             return copia;
         }
     }

@@ -1,65 +1,139 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+
 namespace ChronosArena
 {
     public static class CargadorLocal
     {
-        private static string CarpetaImagenes = Path.Combine(Application.StartupPath, "Imagenes");
-
-        public static void CargarImagen(PictureBox pb, string nombreArchivo)
+        private static string CarpetaImagenes
         {
-            if (pb == null || string.IsNullOrEmpty(nombreArchivo)) return;
+            get
+            {
+                return Path.Combine(Application.StartupPath, "Imagenes");
+            }
+        }
+
+        public static void CargarImagen(PictureBox cuadro, string archivoOUrl)
+        {
+            if (cuadro == null)
+            {
+                return;
+            }
+
+            Image nueva = ObtenerImagen(archivoOUrl);
+            Image anterior = cuadro.Image;
+
+            cuadro.Image = nueva;
+
+            if (anterior != null)
+            {
+                anterior.Dispose();
+            }
+        }
+
+        public static void CargarImagen(Form formulario, string archivoOUrl)
+        {
+            if (formulario == null)
+            {
+                return;
+            }
+
+            Image nueva = ObtenerImagen(archivoOUrl);
+            Image anterior = formulario.BackgroundImage;
+
+            formulario.BackgroundImage = nueva;
+            formulario.BackgroundImageLayout = ImageLayout.Stretch;
+
+            if (anterior != null)
+            {
+                anterior.Dispose();
+            }
+        }
+
+        private static Image ObtenerImagen(string archivoOUrl)
+        {
+            if (String.IsNullOrWhiteSpace(archivoOUrl))
+            {
+                return null;
+            }
 
             try
             {
+                string nombre = archivoOUrl.Trim();
+                Uri uri;
+
+                if (Uri.TryCreate(nombre, UriKind.Absolute, out uri) &&
+                    (uri.Scheme == Uri.UriSchemeHttp ||
+                     uri.Scheme == Uri.UriSchemeHttps))
+                {
+                    nombre = Path.GetFileName(uri.LocalPath);
+                }
+                else
+                {
+                    nombre = Path.GetFileName(nombre);
+                }
+
+                if (String.IsNullOrWhiteSpace(nombre))
+                {
+                    return null;
+                }
+
                 if (!Directory.Exists(CarpetaImagenes))
                 {
-                    pb.Image = null;
-                    return;
+                    return null;
                 }
 
-                string rutaEncontrada = null;
-                string rutaExacta = Path.Combine(CarpetaImagenes, nombreArchivo);
+                string encontrada = Path.Combine(CarpetaImagenes, nombre);
 
-                // 1. Buscar coincidencia exacta
-                if (File.Exists(rutaExacta))
+                if (!File.Exists(encontrada))
                 {
-                    rutaEncontrada = rutaExacta;
-                }
-                else
-                {
-                    // 2. Si falla por extensión (.jpg vs .jpeg), extraer el nombre base (ej: "Hanzo")
-                    string nombreBase = nombreArchivo.Split('.')[0];
-                    string[] archivosCoincidentes = Directory.GetFiles(CarpetaImagenes, nombreBase + ".*");
+                    string baseNombre = Path.GetFileNameWithoutExtension(nombre);
 
-                    if (archivosCoincidentes.Length > 0)
+                    while (baseNombre.IndexOf('.') >= 0)
                     {
-                        rutaEncontrada = archivosCoincidentes[0];
+                        baseNombre = Path.GetFileNameWithoutExtension(baseNombre);
                     }
-                }
 
-                // 3. Cargar la imagen en memoria si se encontró alguna variante
-                if (!string.IsNullOrEmpty(rutaEncontrada) && File.Exists(rutaEncontrada))
-                {
-                    using (FileStream fs = new FileStream(rutaEncontrada, FileMode.Open, FileAccess.Read))
+                    string[] archivos = Directory.GetFiles(CarpetaImagenes);
+                    encontrada = null;
+
+                    foreach (string archivo in archivos)
                     {
-                        if (pb.Image != null)
+                        string baseArchivo = Path.GetFileNameWithoutExtension(archivo);
+
+                        if (String.Equals(
+                            baseArchivo,
+                            baseNombre,
+                            StringComparison.OrdinalIgnoreCase))
                         {
-                            pb.Image.Dispose();
+                            encontrada = archivo;
+                            break;
                         }
-                        pb.Image = Image.FromStream(fs);
+                    }
+
+                    if (encontrada == null)
+                    {
+                        return null;
                     }
                 }
-                else
+
+                using (FileStream stream = new FileStream(
+                    encontrada,
+                    FileMode.Open,
+                    FileAccess.Read,
+                    FileShare.Read))
                 {
-                    pb.Image = null;
+                    using (Image imagenOriginal = Image.FromStream(stream))
+                    {
+                        return new Bitmap(imagenOriginal);
+                    }
                 }
             }
             catch (Exception)
             {
-                pb.Image = null;
+                return null;
             }
         }
     }

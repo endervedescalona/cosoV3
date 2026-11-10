@@ -5,7 +5,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ChronosArena</RootNamespace>
     <AssemblyName>ChronosArena</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
@@ -39,14 +39,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\AdaptadorPantalla.cs" />
-    <Compile Include="Logic\CargadorLocal.cs" />
-    <Compile Include="Model\Ambiente.cs" />
     <Compile Include="Model\Personaje.cs" />
     <Compile Include="Model\ClasesHijas.cs" />
     <Compile Include="Model\Jugador.cs" />
+    <Compile Include="Model\CartaAmbiente.cs" />
     <Compile Include="Logic\GestorMazo.cs" />
     <Compile Include="Logic\GestorBatalla.cs" />
     <Compile Include="Logic\NucleoBatalla.cs" />
+    <Compile Include="Logic\CargadorLocal.cs" />
+    <Compile Include="Logic\PartidaConfig.cs" />
+    <Compile Include="Logic\ProtocoloMazo.cs" />
+    <Compile Include="Logic\DecisorIA.cs" />
+    <Compile Include="Logic\GestorRed.cs" />
+    <Compile Include="Forms\FormBatalla.Red.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +75,18 @@
     </Compile>
     <Compile Include="Forms\FormModoJuego.Designer.cs">
       <DependentUpon>FormModoJuego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPrePartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPrePartida.Designer.cs">
+      <DependentUpon>FormPrePartida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSeleccionAmbiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSeleccionAmbiente.Designer.cs">
+      <DependentUpon>FormSeleccionAmbiente.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormSeleccionMazo.cs">
       <SubType>Form</SubType>
@@ -96,6 +113,9 @@
     <EmbeddedResource Include="Forms\FormModoJuego.resx">
       <DependentUpon>FormModoJuego.Designer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPrePartida.resx">
+      <DependentUpon>FormPrePartida.Designer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSeleccionMazo.resx">
       <DependentUpon>FormSeleccionMazo.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +125,9 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="Imagenes\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\PersonajesChronos.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

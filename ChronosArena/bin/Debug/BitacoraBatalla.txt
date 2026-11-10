@@ -1,52 +1,129 @@
 ﻿==================================================
 CHRONOS ARENA - REGISTRO DE PARTIDA
 ==================================================
-Fecha: 09/11/2026 05:40:23
+Fecha: 10/11/2026 02:11:17
 Ganador: IA
 
 EQUIPO DEL JUGADOR:
-- Hanzo | Clase: Guerrero | Vida final: 110/110
-- Seraphyn | Clase: Mago | Vida final: 85/85
-- Fiona | Clase: Guerrero | Vida final: 115/115
-- Elara | Clase: Mago | Vida final: 90/90
-- Vessel | Clase: Tanque | Vida final: 160/160
+- Hanzo | Clase: Guerrero | Vida final: 0/110
+- Seraphyn | Clase: Mago | Vida final: 0/85
+- Magnus | Clase: Tanque | Vida final: 0/180
+- Fiona | Clase: Guerrero | Vida final: 0/112
+- Elara | Clase: Mago | Vida final: 0/87
 
 EQUIPO DE LA IA:
-- Leo | Clase: Guerrero | Vida final: 105/105
-- Ibuki | Clase: Mago | Vida final: 120/120
-- Tobias | Clase: Mago | Vida final: 135/135
-- Ranmaru | Clase: Tanque | Vida final: 200/200
-- Cedrid | Clase: Tanque | Vida final: 240/240
+- Fiona | Clase: Guerrero | Vida final: 11/112
+- Elara | Clase: Mago | Vida final: 2/87
+- Ranmaru | Clase: Tanque | Vida final: 0/197
+- Tessho | Clase: Guerrero | Vida final: 77/90
+- Tobias | Clase: Mago | Vida final: 125/125
 
 ACCIONES DE LA PARTIDA:
-05:40:13 - La batalla de Chronos Arena ha comenzado.
-05:40:13 - Tienes 30 segundos para realizar tu acción.
-05:40:23 - El jugador se ha rendido. La computadora gana.
+02:09:19 - La batalla de Chronos Arena ha comenzado.
+02:09:19 - Ambiente activo: Huracán. Elegido por COMPUTADORA.
+02:09:19 - Tienes 30 segundos para realizar tu acción.
+02:09:21 - La computadora ataca con Fiona e inflige 42 de daño.
+02:09:29 - Hanzo ataca a Fiona e inflige 29 de daño.
+02:09:31 - La computadora ataca con Fiona e inflige 43 de daño.
+02:09:33 - Hanzo ataca a Fiona e inflige 30 de daño.
+02:09:35 - La computadora ataca con Fiona e inflige 44 de daño.
+02:09:35 - Hanzo ha sido derrotado.
+02:09:35 - Entra Seraphyn al combate.
+02:09:40 - Seraphyn se defiende: +25 energía, +10 maná y +10 defensa.
+02:09:41 - La computadora usa su especial: Fiona ejecuta Estocada Torrencial e inflige 50 de daño.
+02:09:44 - Seraphyn ataca a Fiona e inflige 14 de daño.
+02:09:45 - La computadora ataca con Fiona e inflige 45 de daño.
+02:09:45 - Seraphyn ha sido derrotado.
+02:09:45 - Entra Magnus al combate.
+02:09:48 - Magnus ataca a Fiona e inflige 19 de daño.
+02:09:49 - Fiona recupera 25 puntos de vida.
+02:09:51 - Magnus ataca a Fiona e inflige 20 de daño.
+02:09:52 - Fiona se defiende: +25 energía, +15 maná y +10 defensa.
+02:09:53 - Magnus activa Escudo Magmático y obtiene +20 de defensa y +10 de energía.
+02:09:54 - Fiona recupera 25 puntos de vida.
+02:10:00 - Magnus ataca a Fiona e inflige 19 de daño.
+02:10:01 - La computadora ataca con Fiona e inflige 33 de daño.
+02:10:07 - Magnus ataca a Fiona e inflige 20 de daño.
+02:10:08 - La computadora releva a su personaje. Entra Elara.
+02:10:11 - Magnus se defiende: +25 energía, +15 maná y +10 defensa.
+02:10:13 - La computadora ataca con Elara e inflige 8 de daño.
+02:10:14 - Magnus activa Escudo Magmático y obtiene +20 de defensa y +10 de energía.
+02:10:16 - Elara se defiende: +25 energía, +0 maná y +10 defensa.
+02:10:18 - Magnus se defiende: +25 energía, +15 maná y +0 defensa.
+02:10:20 - La computadora usa su especial: Elara conjura Prisión Helada e inflige 23 de daño mágico.
+02:10:22 - Magnus activa Escudo Magmático y obtiene +20 de defensa y +10 de energía.
+02:10:23 - La computadora ataca con Elara e inflige 8 de daño.
+02:10:24 - Magnus se defiende: +20 energía, +15 maná y +5 defensa.
+02:10:26 - La computadora usa su especial: Elara conjura Prisión Helada e inflige 23 de daño mágico.
+02:10:29 - Magnus activa Escudo Magmático y obtiene +20 de defensa y +10 de energía.
+02:10:30 - La computadora ataca con Elara e inflige 8 de daño.
+02:10:32 - Magnus se defiende: +0 energía, +15 maná y +5 defensa.
+02:10:33 - La computadora usa su especial: Elara conjura Prisión Helada e inflige 23 de daño mágico.
+02:10:34 - Magnus se defiende: +0 energía, +15 maná y +5 defensa.
+02:10:35 - La computadora ataca con Elara e inflige 8 de daño.
+02:10:36 - Magnus ataca a Elara e inflige 18 de daño.
+02:10:37 - La computadora usa su especial: Elara conjura Prisión Helada e inflige 24 de daño mágico.
+02:10:39 - Magnus ataca a Elara e inflige 19 de daño.
+02:10:41 - Elara se defiende: +25 energía, +15 maná y +10 defensa.
+02:10:43 - Magnus se defiende: +20 energía, +15 maná y +10 defensa.
+02:10:44 - La computadora usa su especial: Elara conjura Prisión Helada e inflige 23 de daño mágico.
+02:10:44 - Magnus ha sido derrotado.
+02:10:44 - Entra Fiona al combate.
+02:10:46 - Fiona se defiende: +25 energía, +15 maná y +10 defensa.
+02:10:47 - La computadora ataca con Elara e inflige 8 de daño.
+02:10:48 - Fiona ataca a Elara e inflige 36 de daño.
+02:10:49 - Elara recupera 25 puntos de vida.
+02:10:50 - Fiona ataca a Elara e inflige 37 de daño.
+02:10:51 - La computadora releva a su personaje. Entra Ranmaru.
+02:10:52 - Fiona ataca a Ranmaru e inflige 29 de daño.
+02:10:53 - La computadora ataca con Ranmaru e inflige 13 de daño.
+02:10:54 - Fiona ataca a Ranmaru e inflige 30 de daño.
+02:10:55 - La computadora ataca con Ranmaru e inflige 14 de daño.
+02:10:55 - Fiona ataca a Ranmaru e inflige 31 de daño.
+02:10:57 - La computadora usa su especial: Ranmaru activa Marea Defensiva y obtiene +20 de defensa y +10 de energía.
+02:10:57 - Fiona ataca a Ranmaru e inflige 28 de daño.
+02:10:58 - La computadora ataca con Ranmaru e inflige 15 de daño.
+02:11:00 - Fiona ejecuta Estocada Torrencial e inflige 42 de daño.
+02:11:02 - Ranmaru recupera 25 puntos de vida.
+02:11:04 - Fiona ataca a Ranmaru e inflige 30 de daño.
+02:11:06 - La computadora ataca con Ranmaru e inflige 16 de daño.
+02:11:07 - Fiona se defiende: +25 energía, +15 maná y +10 defensa.
+02:11:08 - Ranmaru se defiende: +25 energía, +15 maná y +10 defensa.
+02:11:09 - Fiona ejecuta Estocada Torrencial e inflige 42 de daño.
+02:11:09 - Ranmaru ha sido derrotado.
+02:11:09 - La computadora envía a Tessho.
+02:11:10 - La computadora ataca con Tessho e inflige 47 de daño.
+02:11:10 - Fiona ha sido derrotado.
+02:11:10 - Entra Elara al combate.
+02:11:12 - Elara ataca a Tessho e inflige 13 de daño.
+02:11:13 - La computadora ataca con Tessho e inflige 50 de daño.
+02:11:16 - Elara se defiende: +25 energía, +0 maná y +10 defensa.
+02:11:17 - La computadora ataca con Tessho e inflige 49 de daño.
+02:11:17 - Elara ha sido derrotado.
 
 ==================================================
 CHRONOS ARENA - REGISTRO DE PARTIDA
 ==================================================
-Fecha: 09/11/2026 05:54:38
+Fecha: 10/11/2026 02:48:13
 Ganador: Interrumpida
 
 EQUIPO DEL JUGADOR:
-- Ibuki | Clase: Mago | Vida final: 110/120
+- Hanzo | Clase: Guerrero | Vida final: 110/110
 - Seraphyn | Clase: Mago | Vida final: 85/85
-- Elara | Clase: Mago | Vida final: 90/90
-- Ranmaru | Clase: Tanque | Vida final: 200/200
-- Cedrid | Clase: Tanque | Vida final: 240/240
+- Magnus | Clase: Tanque | Vida final: 180/180
+- Fiona | Clase: Guerrero | Vida final: 100/100
+- Leo | Clase: Guerrero | Vida final: 97/97
 
 EQUIPO DE LA IA:
-- Tobias | Clase: Mago | Vida final: 135/135
-- Tessho | Clase: Guerrero | Vida final: 100/100
-- Leo | Clase: Guerrero | Vida final: 105/105
-- Magnus | Clase: Tanque | Vida final: 180/180
-- Hanzo | Clase: Guerrero | Vida final: 110/110
+- Leo | Clase: Guerrero | Vida final: 97/97
+- Seraphyn | Clase: Mago | Vida final: 85/85
+- Ranmaru | Clase: Tanque | Vida final: 185/185
+- Fiona | Clase: Guerrero | Vida final: 100/100
+- Tessho | Clase: Guerrero | Vida final: 95/95
 
 ACCIONES DE LA PARTIDA:
-05:53:57 - La batalla de Chronos Arena ha comenzado.
-05:53:57 - Tienes 30 segundos para realizar tu acción.
-05:54:27 - Se agotó el tiempo. El jugador pierde su turno.
-05:54:28 - La computadora ataca con Tobias e inflige 10 de daño.
-05:54:38 - La ventana se cerró antes de finalizar. Partida interrumpida.
+02:48:09 - La batalla de Chronos Arena ha comenzado.
+02:48:09 - Ambiente activo: Erupción Volcánica. Elegido por Jugador 1.
+02:48:09 - Tienes 30 segundos para realizar tu acción.
+02:48:13 - La ventana se cerró antes de finalizar. Partida interrumpida.
 

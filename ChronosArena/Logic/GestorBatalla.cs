@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
 namespace ChronosArena
 {
-    /// <summary>Registra acciones y conserva el historial de cada partida en un TXT.</summary>
+    
     public class GestorBatalla
     {
         private Random aleatorio = new Random();
@@ -13,6 +13,9 @@ namespace ChronosArena
         private List<string> historial = new List<string>();
 
         public string UltimoError { get; private set; }
+
+        // true cuando la partida es Jugador 1 vs Jugador 2 (solo cambia los rótulos del TXT).
+        public bool ModoPvP { get; set; }
 
         public static string ObtenerRutaHistorial()
         {
@@ -44,12 +47,12 @@ namespace ChronosArena
                 contenido.AppendLine("CHRONOS ARENA - REGISTRO DE PARTIDA");
                 contenido.AppendLine("==================================================");
                 contenido.AppendLine("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
-                contenido.AppendLine("Ganador: " + (ganador ?? "Sin determinar"));
+                contenido.AppendLine("Ganador: " + (ganador != null ? ganador : "Sin determinar"));
                 contenido.AppendLine();
-                contenido.AppendLine("EQUIPO DEL JUGADOR:");
+                contenido.AppendLine(ModoPvP ? "EQUIPO DEL JUGADOR 1:" : "EQUIPO DEL JUGADOR:");
                 AgregarEquipo(contenido, equipoJugador);
                 contenido.AppendLine();
-                contenido.AppendLine("EQUIPO DE LA IA:");
+                contenido.AppendLine(ModoPvP ? "EQUIPO DEL JUGADOR 2:" : "EQUIPO DE LA IA:");
                 AgregarEquipo(contenido, equipoIA);
                 contenido.AppendLine();
                 contenido.AppendLine("ACCIONES DE LA PARTIDA:");
