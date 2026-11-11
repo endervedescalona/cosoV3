@@ -41,18 +41,18 @@ namespace ChronosArena
         private static List<Personaje> CrearMazoPredeterminado()
         {
             List<Personaje> mazo = new List<Personaje>();
-            mazo.Add(CrearPersonaje("Hanzo", "Homura", "Fuego", "Guerrero", 110, 35, 40, 50, 30, 5, "Corte Flameante"));
-            mazo.Add(CrearPersonaje("Seraphyn", "Homura", "Fuego", "Mago", 85, 18, 20, 20, 90, 10, "Ráfaga de Incendio"));
-            mazo.Add(CrearPersonaje("Magnus", "Homura", "Fuego", "Tanque", 180, 22, 65, 40, 35, 5, "Escudo Magmático"));
-            mazo.Add(CrearPersonaje("Fiona", "Mizushiro", "Agua", "Guerrero", 115, 40, 35, 45, 35, 8, "Estocada Torrencial"));
-            mazo.Add(CrearPersonaje("Elara", "Mizushiro", "Agua", "Mago", 90, 16, 15, 15, 100, 15, "Prisión Helada"));
-            mazo.Add(CrearPersonaje("Ranmaru", "Mizushiro", "Agua", "Tanque", 200, 20, 60, 35, 35, 10, "Marea Defensiva"));
-            mazo.Add(CrearPersonaje("Vessel", "Kazekiri", "Aire", "Tanque", 160, 25, 58, 50, 35, 8, "Barrera de Viento"));
-            mazo.Add(CrearPersonaje("Ibuki", "Kazekiri", "Aire", "Mago", 120, 12, 22, 20, 80, 40, "Soplido Sanador"));
-            mazo.Add(CrearPersonaje("Leo", "Kazekiri", "Aire", "Guerrero", 105, 30, 45, 60, 35, 5, "Tornados Cruzados"));
-            mazo.Add(CrearPersonaje("Cedrid", "Daichi", "Tierra", "Tanque", 240, 18, 70, 30, 35, 12, "Fortaleza Terrenal"));
-            mazo.Add(CrearPersonaje("Tobias", "Daichi", "Tierra", "Mago", 135, 14, 25, 15, 85, 48, "Raíz del Bosque"));
-            mazo.Add(CrearPersonaje("Tessho", "Daichi", "Tierra", "Guerrero", 100, 42, 32, 40, 35, 6, "Impacto Sólido"));
+            mazo.Add(CrearPersonaje("Hanzo", "Homura", "Fuego", "Guerrero", 30, 40, 25, 50, 30, 5, "Corte Flameante"));
+            mazo.Add(CrearPersonaje("Seraphyn", "Homura", "Fuego", "Mago", 25, 40, 35, 20, 90, 10, "Ráfaga de Incendio"));
+            mazo.Add(CrearPersonaje("Magnus", "Homura", "Fuego", "Tanque", 50, 6, 44, 40, 35, 5, "Escudo Magmático"));
+            mazo.Add(CrearPersonaje("Fiona", "Mizushiro", "Agua", "Guerrero", 35, 40, 25, 45, 35, 8, "Estocada Torrencial"));
+            mazo.Add(CrearPersonaje("Elara", "Mizushiro", "Agua", "Mago", 35, 30, 35, 15, 100, 15, "Prisión Helada"));
+            mazo.Add(CrearPersonaje("Ranmaru", "Mizushiro", "Agua", "Tanque", 45, 10, 45, 35, 35, 10, "Marea Defensiva"));
+            mazo.Add(CrearPersonaje("Vessel", "Kazekiri", "Aire", "Tanque", 50, 8, 42, 50, 35, 8, "Barrera de Viento"));
+            mazo.Add(CrearPersonaje("Ibuki", "Kazekiri", "Aire", "Mago", 30, 25, 45, 20, 80, 40, "Soplido Sanador"));
+            mazo.Add(CrearPersonaje("Leo", "Kazekiri", "Aire", "Guerrero", 30, 50, 20, 60, 35, 5, "Tornados Cruzados"));
+            mazo.Add(CrearPersonaje("Cedrid", "Daichi", "Tierra", "Tanque", 48 , 12, 40, 30, 35, 12, "Fortaleza Terrenal"));
+            mazo.Add(CrearPersonaje("Tobias", "Daichi", "Tierra", "Mago", 25, 35, 40, 15, 85, 48, "Raíz del Bosque"));
+            mazo.Add(CrearPersonaje("Tessho", "Daichi", "Tierra", "Guerrero", 40, 40, 30 , 40, 35, 6, "Impacto Sólido"));
             return mazo;
         }
 

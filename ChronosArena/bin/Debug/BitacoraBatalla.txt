@@ -127,3 +127,137 @@ ACCIONES DE LA PARTIDA:
 02:48:09 - Tienes 30 segundos para realizar tu acción.
 02:48:13 - La ventana se cerró antes de finalizar. Partida interrumpida.
 
+==================================================
+CHRONOS ARENA - REGISTRO DE PARTIDA
+==================================================
+Fecha: 11/11/2026 08:09:32
+Ganador: Interrumpida
+
+EQUIPO DEL JUGADOR:
+- Seraphyn | Clase: Mago | Vida final: 0/85
+- Hanzo | Clase: Guerrero | Vida final: 1/110
+- Magnus | Clase: Tanque | Vida final: 175/180
+- Fiona | Clase: Guerrero | Vida final: 115/120
+- Elara | Clase: Mago | Vida final: 90/95
+
+EQUIPO DE LA IA:
+- Seraphyn | Clase: Mago | Vida final: 0/85
+- Leo | Clase: Guerrero | Vida final: 17/105
+- Vessel | Clase: Tanque | Vida final: 155/160
+- Fiona | Clase: Guerrero | Vida final: 115/120
+- Elara | Clase: Mago | Vida final: 90/95
+
+ACCIONES DE LA PARTIDA:
+08:08:46 - La batalla de Chronos Arena ha comenzado.
+08:08:46 - Ambiente activo: Deslave. Elegido por COMPUTADORA.
+08:08:46 - Tienes 30 segundos para realizar tu acción.
+08:08:47 - La computadora ataca con Seraphyn e inflige 13 de daño.
+08:08:52 - Seraphyn ataca a Seraphyn e inflige 13 de daño.
+08:08:54 - La computadora ataca con Seraphyn e inflige 14 de daño.
+08:08:57 - Seraphyn ataca a Seraphyn e inflige 14 de daño.
+08:08:59 - La computadora usa su especial: Seraphyn conjura Ráfaga de Incendio e inflige 41 de daño mágico.
+08:09:00 - Seraphyn conjura Ráfaga de Incendio e inflige 41 de daño mágico.
+08:09:00 - ¡¡TERREMOTO!! El evento global ha afectado a ambos equipos: -5 de vida y -3 de defensa para cada personaje.
+08:09:00 - Seraphyn (Jugador): Vida 17 -> 12, Defensa 0 -> 0.
+08:09:00 - Hanzo (Jugador): Vida 110 -> 105, Defensa 30 -> 27.
+08:09:00 - Magnus (Jugador): Vida 180 -> 175, Defensa 55 -> 52.
+08:09:00 - Fiona (Jugador): Vida 120 -> 115, Defensa 45 -> 42.
+08:09:00 - Elara (Jugador): Vida 95 -> 90, Defensa 25 -> 22.
+08:09:00 - Seraphyn (Rival/IA): Vida 17 -> 12, Defensa 0 -> 0.
+08:09:00 - Leo (Rival/IA): Vida 105 -> 100, Defensa 42 -> 39.
+08:09:00 - Vessel (Rival/IA): Vida 160 -> 155, Defensa 55 -> 52.
+08:09:00 - Fiona (Rival/IA): Vida 120 -> 115, Defensa 45 -> 42.
+08:09:00 - Elara (Rival/IA): Vida 95 -> 90, Defensa 25 -> 22.
+08:09:02 - Seraphyn recupera 25 puntos de vida.
+08:09:03 - Seraphyn se defiende: +25 energía, +15 maná y +10 defensa.
+08:09:05 - La computadora usa su especial: Seraphyn conjura Ráfaga de Incendio e inflige 39 de daño mágico.
+08:09:05 - Seraphyn ha sido derrotado.
+08:09:05 - Entra Hanzo al combate.
+08:09:07 - Hanzo ataca a Seraphyn e inflige 30 de daño.
+08:09:09 - Seraphyn recupera 25 puntos de vida.
+08:09:15 - Hanzo ataca a Seraphyn e inflige 30 de daño.
+08:09:17 - Seraphyn recupera 25 puntos de vida.
+08:09:18 - Hanzo ataca a Seraphyn e inflige 30 de daño.
+08:09:18 - Seraphyn ha sido derrotado.
+08:09:18 - La computadora envía a Leo.
+08:09:20 - La computadora ataca con Leo e inflige 18 de daño.
+08:09:20 - Hanzo ejecuta Corte Flameante e inflige 36 de daño.
+08:09:22 - La computadora ataca con Leo e inflige 20 de daño.
+08:09:23 - Hanzo ataca a Leo e inflige 23 de daño.
+08:09:24 - La computadora usa su especial: Leo ejecuta Tornados Cruzados e inflige 43 de daño.
+08:09:25 - Hanzo ataca a Leo e inflige 24 de daño.
+08:09:26 - La computadora ataca con Leo e inflige 23 de daño.
+08:09:32 - La ventana se cerró antes de finalizar. Partida interrumpida.
+
+==================================================
+CHRONOS ARENA - REGISTRO DE PARTIDA
+==================================================
+Fecha: 11/11/2026 08:18:13
+Ganador: Interrumpida
+
+EQUIPO DEL JUGADOR:
+- Hanzo | Clase: Guerrero | Vida final: 0/30
+- Magnus | Clase: Tanque | Vida final: 0/50
+- Fiona | Clase: Guerrero | Vida final: 0/32
+- Elara | Clase: Mago | Vida final: 19/32
+- Ranmaru | Clase: Tanque | Vida final: 37/42
+
+EQUIPO DE LA IA:
+- Fiona | Clase: Guerrero | Vida final: 0/32
+- Ranmaru | Clase: Tanque | Vida final: 0/42
+- Ibuki | Clase: Mago | Vida final: 62/120
+- Vessel | Clase: Tanque | Vida final: 45/50
+- Magnus | Clase: Tanque | Vida final: 45/50
+
+ACCIONES DE LA PARTIDA:
+08:17:33 - La batalla de Chronos Arena ha comenzado.
+08:17:33 - Ambiente activo: Huracán. Elegido por COMPUTADORA.
+08:17:33 - Tienes 30 segundos para realizar tu acción.
+08:17:34 - La computadora ataca con Fiona e inflige 31 de daño.
+08:17:34 - ¡¡TERREMOTO!! El evento global ha afectado a ambos equipos: -5 de vida y -3 de defensa para cada personaje.
+08:17:34 - Hanzo (Jugador): Vida 0 -> 0, Defensa 25 -> 22.
+08:17:34 - Magnus (Jugador): Vida 50 -> 45, Defensa 44 -> 41.
+08:17:34 - Fiona (Jugador): Vida 32 -> 27, Defensa 21 -> 18.
+08:17:34 - Elara (Jugador): Vida 32 -> 27, Defensa 31 -> 28.
+08:17:34 - Ranmaru (Jugador): Vida 42 -> 37, Defensa 41 -> 38.
+08:17:34 - Fiona (Rival/IA): Vida 32 -> 27, Defensa 21 -> 18.
+08:17:34 - Ranmaru (Rival/IA): Vida 42 -> 37, Defensa 41 -> 38.
+08:17:34 - Ibuki (Rival/IA): Vida 120 -> 115, Defensa 27 -> 24.
+08:17:34 - Vessel (Rival/IA): Vida 50 -> 45, Defensa 63 -> 60.
+08:17:34 - Magnus (Rival/IA): Vida 50 -> 45, Defensa 44 -> 41.
+08:17:34 - Hanzo ha sido derrotado.
+08:17:34 - Entra Magnus al combate.
+08:17:36 - Magnus ataca a Fiona e inflige 6 de daño.
+08:17:38 - La computadora ataca con Fiona e inflige 27 de daño.
+08:17:38 - Magnus ataca a Fiona e inflige 6 de daño.
+08:17:40 - La computadora ataca con Fiona e inflige 29 de daño.
+08:17:40 - Magnus ha sido derrotado.
+08:17:40 - Entra Fiona al combate.
+08:17:41 - Fiona ataca a Fiona e inflige 34 de daño.
+08:17:41 - Fiona ha sido derrotado.
+08:17:41 - La computadora envía a Ranmaru.
+08:17:42 - La computadora ataca con Ranmaru e inflige 7 de daño.
+08:17:42 - Fiona ataca a Ranmaru e inflige 23 de daño.
+08:17:43 - Ranmaru recupera 25 puntos de vida.
+08:17:43 - Fiona ejecuta Estocada Torrencial e inflige 49 de daño.
+08:17:43 - Ranmaru ha sido derrotado.
+08:17:43 - La computadora envía a Ibuki.
+08:17:44 - La computadora ataca con Ibuki e inflige 11 de daño.
+08:17:44 - Fiona ataca a Ibuki e inflige 27 de daño.
+08:17:45 - La computadora ataca con Ibuki e inflige 11 de daño.
+08:17:45 - Fiona ha sido derrotado.
+08:17:45 - Entra Elara al combate.
+08:17:46 - Elara ataca a Ibuki e inflige 22 de daño.
+08:17:47 - La computadora usa su especial: Ibuki conjura Soplido Sanador y recupera 35 puntos de vida.
+08:17:59 - Elara se defiende: +25 energía, +0 maná y +10 defensa.
+08:18:00 - Ibuki se defiende: +25 energía, +15 maná y +10 defensa.
+08:18:00 - Elara ataca a Ibuki e inflige 20 de daño.
+08:18:01 - La computadora usa su especial: Ibuki conjura Soplido Sanador y recupera 35 puntos de vida.
+08:18:01 - Elara conjura Prisión Helada e inflige 56 de daño mágico.
+08:18:02 - La computadora ataca con Ibuki e inflige 8 de daño.
+08:18:03 - Elara ataca a Ibuki e inflige 23 de daño.
+08:18:04 - Ibuki recupera 25 puntos de vida.
+08:18:05 - Elara ataca a Ibuki e inflige 25 de daño.
+08:18:06 - Ibuki recupera 25 puntos de vida.
+08:18:13 - La ventana se cerró antes de finalizar. Partida interrumpida.
+

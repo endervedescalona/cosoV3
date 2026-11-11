@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace ChronosArena
 {
@@ -76,10 +76,12 @@ namespace ChronosArena
             return Vida > 0 && Energia >= 10;
         }
 
+        
         public int EstimarDanoAtaque(Personaje objetivo)
         {
             int ataqueReal = Ataque;
 
+            // Triángulo elemental (Bonus de facción/elemento)
             if ((Elemento == "Fuego" && objetivo.Elemento == "Aire") ||
                 (Elemento == "Agua" && objetivo.Elemento == "Fuego") ||
                 (Elemento == "Aire" && objetivo.Elemento == "Tierra") ||
@@ -88,10 +90,24 @@ namespace ChronosArena
                 ataqueReal += 10;
             }
 
-            // La defensa reduce el daño, pero nunca lo anula: cada ataque
-            // normal debe producir una variación visible en la barra de vida.
-            return Math.Max(8, ataqueReal - objetivo.Defensa / 5);
+            // Fórmula racional de rendimientos decrecientes: Daño = Ataque * [ 50 / (50 + Defensa) ]
+            double kConstante = 50.0;
+            double factorMitigacion = kConstante / (kConstante + (double)objetivo.Defensa);
+            int danoCalculado = (int)Math.Round(ataqueReal * factorMitigacion);
+            return Math.Max(6, danoCalculado);
         }
+        
+        
+        
+       
+        
+        
+        
+        
+        
+        
+        
+        
 
         public int Atacar(Personaje objetivo)
         {
