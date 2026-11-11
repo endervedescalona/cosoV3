@@ -82,3 +82,33 @@ C:\Users\k\Downloads\cosoV3-main\ChronosArena\obj\Debug\ChronosArena.MainForm.re
 C:\Users\k\Downloads\cosoV3-main\ChronosArena\obj\Debug\ChronosArena.csproj.GenerateResource.Cache
 C:\Users\k\Downloads\cosoV3-main\ChronosArena\obj\Debug\ChronosArena.exe
 C:\Users\k\Downloads\cosoV3-main\ChronosArena\obj\Debug\ChronosArena.pdb
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\bin\Debug\Data\PersonajesChronos.txt
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\bin\Debug\Data\imagenes_chronos.txt.example
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\bin\Debug\ChronosArena.exe
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\bin\Debug\ChronosArena.pdb
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.csprojResolveAssemblyReference.cache
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.FormBatalla.resources
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.FormCartas.resources
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.FormModoJuego.resources
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.FormPrePartida.resources
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.FormSeleccionMazo.resources
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.FormVentanaReglas.resources
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.MainForm.resources
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.csproj.GenerateResource.Cache
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.exe
+C:\Users\k\Desktop\cosoV3-main\ChronosArena - copia\obj\Debug\ChronosArena.pdb
+C:\Users\k\Downloads\ChronosArena - copia\bin\Debug\Data\PersonajesChronos.txt
+C:\Users\k\Downloads\ChronosArena - copia\bin\Debug\Data\imagenes_chronos.txt.example
+C:\Users\k\Downloads\ChronosArena - copia\bin\Debug\ChronosArena.exe
+C:\Users\k\Downloads\ChronosArena - copia\bin\Debug\ChronosArena.pdb
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.csprojResolveAssemblyReference.cache
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.FormBatalla.resources
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.FormCartas.resources
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.FormModoJuego.resources
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.FormPrePartida.resources
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.FormSeleccionMazo.resources
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.FormVentanaReglas.resources
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.MainForm.resources
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.csproj.GenerateResource.Cache
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.exe
+C:\Users\k\Downloads\ChronosArena - copia\obj\Debug\ChronosArena.pdb

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -102,7 +102,7 @@ namespace ChronosArena
                     bool volverSeleccionMazo = false;
                     while (!ambienteConfirmado)
                     {
-                        using (FormPrePartida preparacion = new FormPrePartida())
+                        using (FormPrePartida preparacion = new FormPrePartida(PartidaConfig.EsVsIA ? (IList<Personaje>)equipo1 : null))
                         {
                             if (preparacion.ShowDialog(this) != DialogResult.OK)
                             {

@@ -91,6 +91,7 @@ namespace ChronosArena
             cmbFiltro.Items.Add("Facción: Kazekiri");
             cmbFiltro.Items.Add("Facción: Daichi");
             cmbFiltro.SelectedIndex = 0;
+            CargarEquiposGuardadosEnCombo();
 
             btnElegir.Enabled = false;
             btnRetirar.Enabled = false;
@@ -114,6 +115,69 @@ namespace ChronosArena
                 lblEstado.Text =
                     "Elige tus 5 cartas. Tu rival elige las suyas en su PC.";
             }
+        }
+
+        private void CargarEquiposGuardadosEnCombo()
+        {
+            cmbEquiposGuardados.BeginUpdate();
+            try
+            {
+                cmbEquiposGuardados.Items.Clear();
+                cmbEquiposGuardados.Items.Add("Cargar equipo guardado...");
+
+                Dictionary<string, List<string>> equipos =
+                    GestorMazo.ObtenerEquiposGuardados();
+
+                foreach (string nombre in equipos.Keys.OrderBy(x => x))
+                    cmbEquiposGuardados.Items.Add(nombre);
+
+                if (equipos.Count == 0)
+                    cmbEquiposGuardados.Items.Add("(No hay equipos guardados)");
+
+                cmbEquiposGuardados.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                cmbEquiposGuardados.Items.Clear();
+                cmbEquiposGuardados.Items.Add("Error al leer equipos guardados");
+                cmbEquiposGuardados.SelectedIndex = 0;
+                MessageBox.Show(
+                    "No se pudieron cargar los equipos guardados.\r\n\r\n" +
+                    ex.Message,
+                    "Chronos Arena", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                cmbEquiposGuardados.EndUpdate();
+            }
+        }
+
+        private void CmbEquiposGuardados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEquiposGuardados.SelectedIndex <= 0 ||
+                !PartidaConfig.EsVsIA ||
+                cmbEquiposGuardados.SelectedItem == null ||
+                cmbEquiposGuardados.SelectedItem.ToString().StartsWith("("))
+                return;
+            string nombre = cmbEquiposGuardados.SelectedItem.ToString();
+            Dictionary<string, List<string>> equipos = GestorMazo.ObtenerEquiposGuardados();
+            List<string> nombres;
+            if (!equipos.TryGetValue(nombre, out nombres)) return;
+            List<Personaje> recuperados = new List<Personaje>();
+            foreach (string nombreCarta in nombres)
+            {
+                Personaje encontrado = catalogo.FirstOrDefault(x => String.Equals(x.Nombre, nombreCarta, StringComparison.OrdinalIgnoreCase));
+                if (encontrado == null) { MessageBox.Show("No se encontró la carta guardada: " + nombreCarta); return; }
+                recuperados.Add(encontrado.Clonar());
+            }
+            mazoJugador1.Clear();
+            mazoJugador2.Clear();
+            foreach (Personaje carta in recuperados) mazoJugador1.Add(carta);
+            foreach (Personaje carta in recuperados) ElegirIA(carta);
+            DibujarCatalogo();
+            ActualizarListas();
+            lblEstado.Text = "Equipo de " + nombre + " cargado. Puedes modificarlo o comenzar la partida.";
+            btnComenzar.Enabled = mazoJugador1.Count == 5 && mazoJugador2.Count == 5;
         }
 
         private void ActualizarRotulosPvP()

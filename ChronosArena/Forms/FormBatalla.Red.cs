@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -149,6 +149,13 @@ namespace ChronosArena
 
                         AplicarAccionRival(mensaje.Tipo);
                     }
+                    break;
+
+                case "TERREMOTO":
+                    AplicarTerremoto();
+                    ResolverDerrotasPvP();
+                    if (!batallaTerminada)
+                        ActualizarInterfaz();
                     break;
 
                 case "RENDIR":

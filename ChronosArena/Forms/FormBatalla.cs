@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -23,6 +23,10 @@ namespace ChronosArena
         private bool batallaTerminada;
         private bool turnoIAEnProceso;
         private Random random = new Random();
+
+        // Evento global: una sola activación posible por partida.
+        private bool terremotoOcurrido;
+        private int probabilidadTerremoto;
         private DecisorIA decisorIA;
         private Timer temporizadorIA;
 
@@ -257,6 +261,64 @@ namespace ChronosArena
             txtRegistro.ScrollToCaret();
 
             gestor.Registrar(mensaje);
+        }
+
+        // La probabilidad aumenta 5 puntos porcentuales por cada turno
+        // completado. El evento solo puede ocurrir una vez en la partida.
+        private void ProcesarTurnoTerremoto()
+        {
+            if (terremotoOcurrido || batallaTerminada)
+                return;
+
+            probabilidadTerremoto = Math.Min(100, probabilidadTerremoto + 5);
+
+            // En LAN el anfitrión realiza el sorteo y comunica el resultado,
+            // evitando que cada computadora obtenga un resultado diferente.
+            if (esOnline && (red == null || !red.EsAnfitrion))
+                return;
+
+            int sorteo = random.Next(1, 101);
+            if (sorteo <= probabilidadTerremoto)
+            {
+                AplicarTerremoto();
+
+                if (esOnline && red != null)
+                    red.Enviar("TERREMOTO");
+            }
+        }
+
+        private void AplicarTerremoto()
+        {
+            if (terremotoOcurrido)
+                return;
+
+            terremotoOcurrido = true;
+            AgregarRegistro(
+                "¡¡TERREMOTO!! El evento global ha afectado a ambos equipos: -5 de vida y -3 de defensa para cada personaje.");
+
+            foreach (Personaje personaje in equipoJugador)
+            {
+                if (personaje == null) continue;
+                int vidaAntes = personaje.Vida;
+                int defensaAntes = personaje.Defensa;
+                personaje.RecibirTerremoto(5, 3);
+                AgregarRegistro(
+                    personaje.Nombre + " (Jugador): Vida " + vidaAntes +
+                    " -> " + personaje.Vida + ", Defensa " + defensaAntes +
+                    " -> " + personaje.Defensa + ".");
+            }
+
+            foreach (Personaje personaje in equipoIA)
+            {
+                if (personaje == null) continue;
+                int vidaAntes = personaje.Vida;
+                int defensaAntes = personaje.Defensa;
+                personaje.RecibirTerremoto(5, 3);
+                AgregarRegistro(
+                    personaje.Nombre + " (Rival/IA): Vida " + vidaAntes +
+                    " -> " + personaje.Vida + ", Defensa " + defensaAntes +
+                    " -> " + personaje.Defensa + ".");
+            }
         }
 
         private void ActualizarInterfaz()
@@ -789,6 +851,9 @@ namespace ChronosArena
             }
 
             if (personajeQueActuo != null) personajeQueActuo.CargarEspecial();
+            ProcesarTurnoTerremoto();
+            if (ResolverJugadorDerrotadoPorEvento())
+                return;
             ActualizarInterfaz();
 
             EjecutarTurnoIA();
@@ -827,6 +892,7 @@ namespace ChronosArena
         private void ResolverAccionPvP(Personaje personajeQueActuo)
         {
             if (personajeQueActuo != null) personajeQueActuo.CargarEspecial();
+            ProcesarTurnoTerremoto();
             ResolverDerrotasPvP();
 
             if (batallaTerminada)
@@ -890,6 +956,12 @@ namespace ChronosArena
             }
 
             if (JugadorActivo != null) JugadorActivo.CargarEspecial();
+            ProcesarTurnoTerremoto();
+
+            // El terremoto también puede derrotar al personaje activo del jugador.
+            if (ResolverJugadorDerrotadoPorEvento())
+                return;
+
             if (IAActiva != null && IAActiva.Vida <= 0)
             {
                 AgregarRegistro(
@@ -911,6 +983,24 @@ namespace ChronosArena
             ActualizarInterfaz();
 
             EjecutarTurnoIA();
+        }
+
+        private bool ResolverJugadorDerrotadoPorEvento()
+        {
+            if (JugadorActivo == null || JugadorActivo.Vida > 0)
+                return batallaTerminada;
+
+            AgregarRegistro(JugadorActivo.Nombre + " ha sido derrotado por el terremoto.");
+            indiceJugador++;
+
+            if (JugadorActivo == null)
+            {
+                FinalizarBatalla();
+                return true;
+            }
+
+            AgregarRegistro("Entra " + JugadorActivo.Nombre + " al combate.");
+            return false;
         }
 
         // TURNO DE LA COMPUTADORA
@@ -1011,6 +1101,8 @@ namespace ChronosArena
 
         private void ResolverDerrotasDespuesDeIA()
         {
+            ProcesarTurnoTerremoto();
+
             if (JugadorActivo != null &&
                 JugadorActivo.Vida <= 0)
             {
@@ -1111,6 +1203,9 @@ namespace ChronosArena
                 }
 
                 if (JugadorActivo != null) JugadorActivo.CargarEspecial();
+                ProcesarTurnoTerremoto();
+                if (ResolverJugadorDerrotadoPorEvento())
+                    return;
                 EjecutarTurnoIA();
             }
         }

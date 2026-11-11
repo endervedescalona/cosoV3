@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ChronosArena
 {
@@ -213,6 +213,15 @@ namespace ChronosArena
 
             Vida = Math.Max(0, Vida - Math.Max(0, cantidad));
             Defensa = Math.Max(0, Defensa - 5);
+        }
+
+        // El terremoto reduce vida y defensa por separado, sin aplicar
+        // la penalización de defensa que normalmente produce un ataque.
+        internal void RecibirTerremoto(int danoVida, int danoDefensa)
+        {
+            Vida = Math.Max(0, Vida - Math.Max(0, danoVida));
+            Defensa = Math.Max(0, Defensa - Math.Max(0, danoDefensa));
+            DefensaBase = Math.Max(0, DefensaBase - Math.Max(0, danoDefensa));
         }
 
         public Personaje Clonar()

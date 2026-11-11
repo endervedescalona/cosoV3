@@ -152,6 +152,129 @@ namespace ChronosArena
             }
         }
 
+        // Los equipos se guardan fuera de bin/Debug para que no se pierdan
+        // al recompilar o cambiar la carpeta desde la que se ejecuta el juego.
+        private static string ArchivoEquiposGuardados
+        {
+            get
+            {
+                string carpeta = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                    "ChronosArena", "Data");
+                return Path.Combine(carpeta, "EquiposGuardados.txt");
+            }
+        }
+
+        // Ruta antigua utilizada por la primera versión de esta función.
+        private static string ArchivoEquiposAnterior
+        {
+            get { return Path.Combine(CarpetaDatos, "EquiposGuardados.txt"); }
+        }
+
+        public static string ObtenerRutaEquiposGuardados()
+        {
+            return ArchivoEquiposGuardados;
+        }
+
+        public static Dictionary<string, List<string>> ObtenerEquiposGuardados()
+        {
+            Dictionary<string, List<string>> equipos =
+                new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
+
+            CargarEquiposDesdeArchivo(ArchivoEquiposGuardados, equipos);
+
+            // Importa automáticamente los equipos que ya se hubieran guardado
+            // con la versión anterior dentro de la carpeta Data del programa.
+            if (equipos.Count == 0 && File.Exists(ArchivoEquiposAnterior))
+                CargarEquiposDesdeArchivo(ArchivoEquiposAnterior, equipos);
+
+            return equipos;
+        }
+
+        private static void CargarEquiposDesdeArchivo(
+            string archivo, Dictionary<string, List<string>> equipos)
+        {
+            try
+            {
+                if (!File.Exists(archivo)) return;
+
+                foreach (string linea in File.ReadAllLines(archivo, Encoding.UTF8))
+                {
+                    if (String.IsNullOrWhiteSpace(linea) ||
+                        linea.TrimStart().StartsWith("#")) continue;
+
+                    string[] partes = linea.Split('|');
+                    if (partes.Length != 2) continue;
+
+                    string nombre = partes[0].Trim();
+                    List<string> cartas = new List<string>();
+
+                    foreach (string carta in partes[1].Split(';'))
+                        if (!String.IsNullOrWhiteSpace(carta))
+                            cartas.Add(carta.Trim());
+
+                    if (nombre.Length > 0 && cartas.Count == 5)
+                        equipos[nombre] = cartas;
+                }
+            }
+            catch (IOException ex)
+            {
+                throw new IOException("No se pudo leer el archivo de equipos: " + archivo, ex);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                throw new UnauthorizedAccessException(
+                    "No hay permiso para leer el archivo de equipos: " + archivo, ex);
+            }
+        }
+
+        public static void GuardarEquipo(string nombreJugador, IList<Personaje> equipo)
+        {
+            if (String.IsNullOrWhiteSpace(nombreJugador))
+                throw new ArgumentException("Escribe el nombre del jugador.", "nombreJugador");
+
+            if (equipo == null || equipo.Count != 5)
+                throw new ArgumentException(
+                    "El equipo debe tener exactamente cinco personajes.", "equipo");
+
+            Dictionary<string, List<string>> equipos = ObtenerEquiposGuardados();
+            List<string> nombres = new List<string>();
+
+            foreach (Personaje personaje in equipo)
+            {
+                if (personaje == null)
+                    throw new ArgumentException("El equipo contiene una carta vacía.");
+
+                string nombreCarta = LimpiarCampo(personaje.Nombre);
+                if (String.IsNullOrWhiteSpace(nombreCarta))
+                    throw new ArgumentException("Una de las cartas no tiene nombre.");
+
+                nombres.Add(nombreCarta);
+            }
+
+            equipos[nombreJugador.Trim()] = nombres;
+
+            string carpeta = Path.GetDirectoryName(ArchivoEquiposGuardados);
+            Directory.CreateDirectory(carpeta);
+
+            List<string> lineas = new List<string>();
+            lineas.Add("# Jugador|Cinco personajes separados por ;");
+
+            foreach (KeyValuePair<string, List<string>> par in equipos)
+                lineas.Add(LimpiarCampo(par.Key) + "|" +
+                    String.Join(";", par.Value.ToArray()));
+
+            // Escritura temporal para evitar dejar el archivo vacío si se
+            // interrumpe la escritura.
+            string temporal = ArchivoEquiposGuardados + ".tmp";
+            File.WriteAllLines(temporal, lineas.ToArray(), Encoding.UTF8);
+
+            if (File.Exists(ArchivoEquiposGuardados))
+                File.Delete(ArchivoEquiposGuardados);
+
+            File.Move(temporal, ArchivoEquiposGuardados);
+        }
+
         public static Dictionary<string, string> ObtenerUrls()
         {
             Dictionary<string, string> urls = new Dictionary<string, string>();

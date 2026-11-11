@@ -64,9 +64,9 @@ namespace ChronosArena
         	this.barraEnergiaJugador = new System.Windows.Forms.ProgressBar();
         	this.lblManaJugador = new System.Windows.Forms.Label();
         	this.barraManaJugador = new System.Windows.Forms.ProgressBar();
-        this.lblEspecialJugador = new System.Windows.Forms.Label();
-        this.barraEspecialJugador = new System.Windows.Forms.ProgressBar();
-        this.lblEmpatiaJugador = new System.Windows.Forms.Label();
+        	this.lblEspecialJugador = new System.Windows.Forms.Label();
+        	this.barraEspecialJugador = new System.Windows.Forms.ProgressBar();
+        	this.lblEmpatiaJugador = new System.Windows.Forms.Label();
         	this.pnlIA = new System.Windows.Forms.Panel();
         	this.lblIA = new System.Windows.Forms.Label();
         	this.lblVidaIA = new System.Windows.Forms.Label();
@@ -75,9 +75,9 @@ namespace ChronosArena
         	this.barraEnergiaIA = new System.Windows.Forms.ProgressBar();
         	this.lblManaIA = new System.Windows.Forms.Label();
         	this.barraManaIA = new System.Windows.Forms.ProgressBar();
-        this.lblEspecialIA = new System.Windows.Forms.Label();
-        this.barraEspecialIA = new System.Windows.Forms.ProgressBar();
-        this.lblEmpatiaIA = new System.Windows.Forms.Label();
+        	this.lblEspecialIA = new System.Windows.Forms.Label();
+        	this.barraEspecialIA = new System.Windows.Forms.ProgressBar();
+        	this.lblEmpatiaIA = new System.Windows.Forms.Label();
         	this.pnlRegistro = new System.Windows.Forms.Panel();
         	this.lblRegistro = new System.Windows.Forms.Label();
         	this.txtRegistro = new System.Windows.Forms.TextBox();
@@ -106,7 +106,7 @@ namespace ChronosArena
         	this.picFondo.Enabled = false;
         	this.picFondo.Location = new System.Drawing.Point(0, 0);
         	this.picFondo.Name = "picFondo";
-        	this.picFondo.Size = new System.Drawing.Size(1280, 760);
+        	this.picFondo.Size = new System.Drawing.Size(1270, 717);
         	this.picFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
         	this.picFondo.TabIndex = 0;
         	this.picFondo.TabStop = false;
@@ -143,9 +143,9 @@ namespace ChronosArena
         	this.pnlJugador.Controls.Add(this.barraEnergiaJugador);
         	this.pnlJugador.Controls.Add(this.lblManaJugador);
         	this.pnlJugador.Controls.Add(this.barraManaJugador);
-        this.pnlJugador.Controls.Add(this.lblEspecialJugador);
-        this.pnlJugador.Controls.Add(this.barraEspecialJugador);
-        this.pnlJugador.Controls.Add(this.lblEmpatiaJugador);
+        	this.pnlJugador.Controls.Add(this.lblEspecialJugador);
+        	this.pnlJugador.Controls.Add(this.barraEspecialJugador);
+        	this.pnlJugador.Controls.Add(this.lblEmpatiaJugador);
         	this.pnlJugador.Location = new System.Drawing.Point(18, 145);
         	this.pnlJugador.Name = "pnlJugador";
         	this.pnlJugador.Size = new System.Drawing.Size(275, 570);
@@ -215,30 +215,35 @@ namespace ChronosArena
         	this.barraManaJugador.TabIndex = 7;
         	// 
         	// lblEspecialJugador
-	this.lblEspecialJugador.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
-	this.lblEspecialJugador.ForeColor = System.Drawing.Color.Cyan;
-	this.lblEspecialJugador.Location = new System.Drawing.Point(12, 470);
-	this.lblEspecialJugador.Name = "lblEspecialJugador";
-	this.lblEspecialJugador.Size = new System.Drawing.Size(248, 17);
-	this.lblEspecialJugador.TabIndex = 8;
-	this.lblEspecialJugador.Text = "ESPECIAL: 0/2";
-	// barraEspecialJugador
-	this.barraEspecialJugador.Location = new System.Drawing.Point(12, 488);
-	this.barraEspecialJugador.Maximum = 2;
-	this.barraEspecialJugador.Name = "barraEspecialJugador";
-	this.barraEspecialJugador.Size = new System.Drawing.Size(248, 10);
-	this.barraEspecialJugador.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-	this.barraEspecialJugador.TabIndex = 9;
-	// lblEmpatiaJugador
-	this.lblEmpatiaJugador.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
-	this.lblEmpatiaJugador.ForeColor = System.Drawing.Color.Gold;
-	this.lblEmpatiaJugador.Location = new System.Drawing.Point(12, 505);
-	this.lblEmpatiaJugador.Name = "lblEmpatiaJugador";
-	this.lblEmpatiaJugador.Size = new System.Drawing.Size(248, 17);
-	this.lblEmpatiaJugador.TabIndex = 10;
-	this.lblEmpatiaJugador.Text = "EMPATIA: 0/10";
-	// 
-	// pnlIA
+        	// 
+        	this.lblEspecialJugador.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+        	this.lblEspecialJugador.ForeColor = System.Drawing.Color.Cyan;
+        	this.lblEspecialJugador.Location = new System.Drawing.Point(12, 470);
+        	this.lblEspecialJugador.Name = "lblEspecialJugador";
+        	this.lblEspecialJugador.Size = new System.Drawing.Size(248, 17);
+        	this.lblEspecialJugador.TabIndex = 8;
+        	this.lblEspecialJugador.Text = "ESPECIAL: 0/2";
+        	// 
+        	// barraEspecialJugador
+        	// 
+        	this.barraEspecialJugador.Location = new System.Drawing.Point(12, 488);
+        	this.barraEspecialJugador.Maximum = 2;
+        	this.barraEspecialJugador.Name = "barraEspecialJugador";
+        	this.barraEspecialJugador.Size = new System.Drawing.Size(248, 10);
+        	this.barraEspecialJugador.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+        	this.barraEspecialJugador.TabIndex = 9;
+        	// 
+        	// lblEmpatiaJugador
+        	// 
+        	this.lblEmpatiaJugador.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+        	this.lblEmpatiaJugador.ForeColor = System.Drawing.Color.Gold;
+        	this.lblEmpatiaJugador.Location = new System.Drawing.Point(12, 505);
+        	this.lblEmpatiaJugador.Name = "lblEmpatiaJugador";
+        	this.lblEmpatiaJugador.Size = new System.Drawing.Size(248, 17);
+        	this.lblEmpatiaJugador.TabIndex = 10;
+        	this.lblEmpatiaJugador.Text = "EMPATIA: 0/10";
+        	// 
+        	// pnlIA
         	// 
         	this.pnlIA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(23)))), ((int)(((byte)(29)))));
         	this.pnlIA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -250,9 +255,9 @@ namespace ChronosArena
         	this.pnlIA.Controls.Add(this.barraEnergiaIA);
         	this.pnlIA.Controls.Add(this.lblManaIA);
         	this.pnlIA.Controls.Add(this.barraManaIA);
-        this.pnlIA.Controls.Add(this.lblEspecialIA);
-        this.pnlIA.Controls.Add(this.barraEspecialIA);
-        this.pnlIA.Controls.Add(this.lblEmpatiaIA);
+        	this.pnlIA.Controls.Add(this.lblEspecialIA);
+        	this.pnlIA.Controls.Add(this.barraEspecialIA);
+        	this.pnlIA.Controls.Add(this.lblEmpatiaIA);
         	this.pnlIA.Location = new System.Drawing.Point(987, 145);
         	this.pnlIA.Name = "pnlIA";
         	this.pnlIA.Size = new System.Drawing.Size(275, 570);
@@ -322,30 +327,35 @@ namespace ChronosArena
         	this.barraManaIA.TabIndex = 7;
         	// 
         	// lblEspecialIA
-	this.lblEspecialIA.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
-	this.lblEspecialIA.ForeColor = System.Drawing.Color.Cyan;
-	this.lblEspecialIA.Location = new System.Drawing.Point(12, 470);
-	this.lblEspecialIA.Name = "lblEspecialIA";
-	this.lblEspecialIA.Size = new System.Drawing.Size(248, 17);
-	this.lblEspecialIA.TabIndex = 8;
-	this.lblEspecialIA.Text = "ESPECIAL: 0/2";
-	// barraEspecialIA
-	this.barraEspecialIA.Location = new System.Drawing.Point(12, 488);
-	this.barraEspecialIA.Maximum = 2;
-	this.barraEspecialIA.Name = "barraEspecialIA";
-	this.barraEspecialIA.Size = new System.Drawing.Size(248, 10);
-	this.barraEspecialIA.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-	this.barraEspecialIA.TabIndex = 9;
-	// lblEmpatiaIA
-	this.lblEmpatiaIA.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
-	this.lblEmpatiaIA.ForeColor = System.Drawing.Color.Gold;
-	this.lblEmpatiaIA.Location = new System.Drawing.Point(12, 505);
-	this.lblEmpatiaIA.Name = "lblEmpatiaIA";
-	this.lblEmpatiaIA.Size = new System.Drawing.Size(248, 17);
-	this.lblEmpatiaIA.TabIndex = 10;
-	this.lblEmpatiaIA.Text = "EMPATIA: 0/10";
-	// 
-	// pnlRegistro
+        	// 
+        	this.lblEspecialIA.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+        	this.lblEspecialIA.ForeColor = System.Drawing.Color.Cyan;
+        	this.lblEspecialIA.Location = new System.Drawing.Point(12, 470);
+        	this.lblEspecialIA.Name = "lblEspecialIA";
+        	this.lblEspecialIA.Size = new System.Drawing.Size(248, 17);
+        	this.lblEspecialIA.TabIndex = 8;
+        	this.lblEspecialIA.Text = "ESPECIAL: 0/2";
+        	// 
+        	// barraEspecialIA
+        	// 
+        	this.barraEspecialIA.Location = new System.Drawing.Point(12, 488);
+        	this.barraEspecialIA.Maximum = 2;
+        	this.barraEspecialIA.Name = "barraEspecialIA";
+        	this.barraEspecialIA.Size = new System.Drawing.Size(248, 10);
+        	this.barraEspecialIA.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+        	this.barraEspecialIA.TabIndex = 9;
+        	// 
+        	// lblEmpatiaIA
+        	// 
+        	this.lblEmpatiaIA.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+        	this.lblEmpatiaIA.ForeColor = System.Drawing.Color.Gold;
+        	this.lblEmpatiaIA.Location = new System.Drawing.Point(12, 505);
+        	this.lblEmpatiaIA.Name = "lblEmpatiaIA";
+        	this.lblEmpatiaIA.Size = new System.Drawing.Size(248, 17);
+        	this.lblEmpatiaIA.TabIndex = 10;
+        	this.lblEmpatiaIA.Text = "EMPATIA: 0/10";
+        	// 
+        	// pnlRegistro
         	// 
         	this.pnlRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
         	this.pnlRegistro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -511,7 +521,7 @@ namespace ChronosArena
         	this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         	this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(17)))), ((int)(((byte)(27)))));
-        	this.ClientSize = new System.Drawing.Size(1280, 760);
+        	this.ClientSize = new System.Drawing.Size(1270, 717);
         	this.Controls.Add(this.lblTitulo);
         	this.Controls.Add(this.lblTemporizador);
         	this.Controls.Add(this.lblAnuncio);
@@ -521,15 +531,12 @@ namespace ChronosArena
         	this.Controls.Add(this.pnlAcciones);
         	this.Controls.Add(this.btnVolver);
         	this.Controls.Add(this.picFondo);
-        this.Controls.SetChildIndex(this.picFondo, this.Controls.Count - 1);
+        	this.DoubleBuffered = true;
         	this.Font = new System.Drawing.Font("Courier New", 9F);
-        	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-        	this.MaximizeBox = true;
-        	this.MinimumSize = new System.Drawing.Size(1286, 788);
+        	this.MinimumSize = new System.Drawing.Size(1286, 726);
         	this.Name = "FormBatalla";
         	this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         	this.Text = "Chronos Arena - Campo de batalla";
-            this.DoubleBuffered = true;
         	((System.ComponentModel.ISupportInitialize)(this.picFondo)).EndInit();
         	((System.ComponentModel.ISupportInitialize)(this.picJugador)).EndInit();
         	((System.ComponentModel.ISupportInitialize)(this.picIA)).EndInit();

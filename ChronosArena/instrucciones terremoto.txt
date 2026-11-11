@@ -1,0 +1,24 @@
+EVENTO ALEATORIO: TERREMOTO - CHRONOS ARENA
+
+Implementación integrada en clases existentes.
+
+REGLAS
+- El evento es único por partida: puede ocurrir una vez o no ocurrir.
+- La probabilidad empieza en 5% al terminar el primer turno evaluado.
+- Aumenta 5 puntos porcentuales por cada turno completado, hasta llegar al 100%.
+- En partidas contra IA se evalúan los turnos del jugador y de la IA.
+- En PvP se evalúa al finalizar el turno de cada jugador.
+- Si ocurre, todos los personajes de ambos mazos (incluida la reserva y la IA)
+  pierden 5 puntos de vida y 3 puntos de defensa.
+- Vida y defensa nunca bajan de cero.
+- La reducción de defensa del terremoto es independiente del daño normal.
+- El cambio se aplica a las estadísticas reales, por lo que los personajes que
+  entren después también aparecerán con las estadísticas reducidas.
+- El evento y los cambios individuales quedan registrados en la bitácora.
+- En partidas LAN el anfitrión realiza el sorteo y comunica el evento para que
+  ambos equipos mantengan exactamente el mismo estado.
+
+ARCHIVOS MODIFICADOS
+- Forms/FormBatalla.cs
+- Forms/FormBatalla.Red.cs
+- Model/Personaje.cs

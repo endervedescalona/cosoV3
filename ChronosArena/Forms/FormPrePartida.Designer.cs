@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ChronosArena
@@ -21,6 +21,7 @@ namespace ChronosArena
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.Button btnGuardarEquipo;
 
         protected override void Dispose(bool disposing)
         {
@@ -46,6 +47,7 @@ namespace ChronosArena
         	this.lblEstado = new System.Windows.Forms.Label();
         	this.btnAtras = new System.Windows.Forms.Button();
         	this.btnContinuar = new System.Windows.Forms.Button();
+        	this.btnGuardarEquipo = new System.Windows.Forms.Button();
         	this.pnlDados.SuspendLayout();
         	this.SuspendLayout();
         	// 
@@ -117,9 +119,9 @@ namespace ChronosArena
         	this.pnlDados.Controls.Add(this.lblTituloDados);
         	this.pnlDados.Controls.Add(this.lblDado1);
         	this.pnlDados.Controls.Add(this.lblDado2);
-        	this.pnlDados.Location = new System.Drawing.Point(475, 92);
+        	this.pnlDados.Location = new System.Drawing.Point(480, 92);
         	this.pnlDados.Name = "pnlDados";
-        	this.pnlDados.Size = new System.Drawing.Size(410, 265);
+        	this.pnlDados.Size = new System.Drawing.Size(405, 228);
         	this.pnlDados.TabIndex = 6;
         	// 
         	// lblTituloDados
@@ -176,7 +178,8 @@ namespace ChronosArena
         	// lblEstado
         	// 
         	this.lblEstado.BackColor = System.Drawing.Color.Transparent;
-        	this.lblEstado.ForeColor = System.Drawing.Color.LightSkyBlue;
+        	this.lblEstado.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.lblEstado.ForeColor = System.Drawing.Color.Yellow;
         	this.lblEstado.Location = new System.Drawing.Point(40, 420);
         	this.lblEstado.Name = "lblEstado";
         	this.lblEstado.Size = new System.Drawing.Size(840, 38);
@@ -208,6 +211,19 @@ namespace ChronosArena
         	this.btnContinuar.Text = "CONTINUAR";
         	this.btnContinuar.UseVisualStyleBackColor = false;
         	// 
+        	// btnGuardarEquipo
+        	// 
+        	this.btnGuardarEquipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(95)))), ((int)(((byte)(145)))));
+        	this.btnGuardarEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        	this.btnGuardarEquipo.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.btnGuardarEquipo.ForeColor = System.Drawing.Color.White;
+        	this.btnGuardarEquipo.Location = new System.Drawing.Point(315, 350);
+        	this.btnGuardarEquipo.Name = "btnGuardarEquipo";
+        	this.btnGuardarEquipo.Size = new System.Drawing.Size(245, 52);
+        	this.btnGuardarEquipo.TabIndex = 11;
+        	this.btnGuardarEquipo.Text = "GUARDAR EQUIPO";
+        	this.btnGuardarEquipo.UseVisualStyleBackColor = false;
+        	// 
         	// FormPrePartida
         	// 
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -224,6 +240,7 @@ namespace ChronosArena
         	this.Controls.Add(this.lblEstado);
         	this.Controls.Add(this.btnAtras);
         	this.Controls.Add(this.btnContinuar);
+        	this.Controls.Add(this.btnGuardarEquipo);
         	this.Font = new System.Drawing.Font("Courier New", 9F);
         	this.ForeColor = System.Drawing.Color.White;
         	this.MinimumSize = new System.Drawing.Size(860, 500);

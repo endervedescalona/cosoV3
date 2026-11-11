@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ChronosArena
@@ -10,6 +10,7 @@ namespace ChronosArena
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.ComboBox cmbFiltro;
+        private System.Windows.Forms.ComboBox cmbEquiposGuardados;
         private System.Windows.Forms.FlowLayoutPanel panelCatalogo;
         private System.Windows.Forms.PictureBox picReverso;
         private System.Windows.Forms.Label lblJugador;
@@ -34,6 +35,7 @@ namespace ChronosArena
         	this.lblEstado = new System.Windows.Forms.Label();
         	this.lblFiltro = new System.Windows.Forms.Label();
         	this.cmbFiltro = new System.Windows.Forms.ComboBox();
+        this.cmbEquiposGuardados = new System.Windows.Forms.ComboBox();
         	this.panelCatalogo = new System.Windows.Forms.FlowLayoutPanel();
         	this.picReverso = new System.Windows.Forms.PictureBox();
         	this.lblJugador = new System.Windows.Forms.Label();
@@ -87,7 +89,15 @@ namespace ChronosArena
         	this.cmbFiltro.Name = "cmbFiltro";
         	this.cmbFiltro.Size = new System.Drawing.Size(188, 22);
         	this.cmbFiltro.TabIndex = 3;
-        	this.cmbFiltro.SelectedIndexChanged += new System.EventHandler(this.CmbFiltro_SelectedIndexChanged);
+        	this.cmbEquiposGuardados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbEquiposGuardados.Font = new System.Drawing.Font("Courier New", 8.5F);
+        this.cmbEquiposGuardados.FormattingEnabled = true;
+        this.cmbEquiposGuardados.Location = new System.Drawing.Point(315, 46);
+        this.cmbEquiposGuardados.Name = "cmbEquiposGuardados";
+        this.cmbEquiposGuardados.Size = new System.Drawing.Size(220, 22);
+        this.cmbEquiposGuardados.TabIndex = 4;
+        this.cmbEquiposGuardados.SelectedIndexChanged += new System.EventHandler(this.CmbEquiposGuardados_SelectedIndexChanged);
+        this.cmbFiltro.SelectedIndexChanged += new System.EventHandler(this.CmbFiltro_SelectedIndexChanged);
         	// 
         	// panelCatalogo
         	// 
@@ -231,6 +241,7 @@ namespace ChronosArena
         	this.Controls.Add(this.lblEstado);
         	this.Controls.Add(this.lblFiltro);
         	this.Controls.Add(this.cmbFiltro);
+        this.Controls.Add(this.cmbEquiposGuardados);
         	this.Controls.Add(this.picReverso);
         	this.Controls.Add(this.panelCatalogo);
         	this.Controls.Add(this.lblJugador);
