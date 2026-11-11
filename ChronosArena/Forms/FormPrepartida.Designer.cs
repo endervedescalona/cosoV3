@@ -7,20 +7,20 @@ namespace ChronosArena
     {
         private System.ComponentModel.IContainer components = null;
 
-        private Label lblTitulo;
-        private Label lblNombre1;
-        private TextBox txtNombre1;
-        private Label lblNombre2;
-        private TextBox txtNombre2;
-        private Label lblRival;
-        private Panel pnlDados;
-        private Label lblTituloDados;
-        private Label lblDado1;
-        private Label lblDado2;
-        private Button btnLanzar;
-        private Label lblEstado;
-        private Button btnAtras;
-        private Button btnContinuar;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblNombre1;
+        private System.Windows.Forms.TextBox txtNombre1;
+        private System.Windows.Forms.Label lblNombre2;
+        private System.Windows.Forms.TextBox txtNombre2;
+        private System.Windows.Forms.Label lblRival;
+        private System.Windows.Forms.Panel pnlDados;
+        private System.Windows.Forms.Label lblTituloDados;
+        private System.Windows.Forms.Label lblDado1;
+        private System.Windows.Forms.Label lblDado2;
+        private System.Windows.Forms.Button btnLanzar;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnContinuar;
 
         protected override void Dispose(bool disposing)
         {
@@ -32,101 +32,101 @@ namespace ChronosArena
 
         private void InitializeComponent()
         {
-            this.lblTitulo = new Label();
-            this.lblNombre1 = new Label();
-            this.txtNombre1 = new TextBox();
-            this.lblNombre2 = new Label();
-            this.txtNombre2 = new TextBox();
-            this.lblRival = new Label();
-            this.pnlDados = new Panel();
-            this.lblTituloDados = new Label();
-            this.lblDado1 = new Label();
-            this.lblDado2 = new Label();
-            this.btnLanzar = new Button();
-            this.lblEstado = new Label();
-            this.btnAtras = new Button();
-            this.btnContinuar = new Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblNombre1 = new System.Windows.Forms.Label();
+            this.txtNombre1 = new System.Windows.Forms.TextBox();
+            this.lblNombre2 = new System.Windows.Forms.Label();
+            this.txtNombre2 = new System.Windows.Forms.TextBox();
+            this.lblRival = new System.Windows.Forms.Label();
+            this.pnlDados = new System.Windows.Forms.Panel();
+            this.lblTituloDados = new System.Windows.Forms.Label();
+            this.lblDado1 = new System.Windows.Forms.Label();
+            this.lblDado2 = new System.Windows.Forms.Label();
+            this.btnLanzar = new System.Windows.Forms.Button();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnContinuar = new System.Windows.Forms.Button();
 
             this.SuspendLayout();
             this.pnlDados.SuspendLayout();
 
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Text = "ANTES DE INICIAR";
-            this.lblTitulo.Font = new Font("Georgia", 23F, FontStyle.Bold);
-            this.lblTitulo.ForeColor = Color.White;
-            this.lblTitulo.Location = new Point(30, 18);
-            this.lblTitulo.Size = new Size(650, 48);
-            this.lblTitulo.BackColor = Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Georgia", 23F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(30, 18);
+            this.lblTitulo.Size = new System.Drawing.Size(650, 48);
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
 
             this.lblNombre1.Name = "lblNombre1";
             this.lblNombre1.Text = "NOMBRE DEL JUGADOR 1";
-            this.lblNombre1.Location = new Point(40, 94);
-            this.lblNombre1.Size = new Size(380, 23);
-            this.lblNombre1.ForeColor = Color.White;
-            this.lblNombre1.BackColor = Color.Transparent;
+            this.lblNombre1.Location = new System.Drawing.Point(40, 94);
+            this.lblNombre1.Size = new System.Drawing.Size(380, 23);
+            this.lblNombre1.ForeColor = System.Drawing.Color.White;
+            this.lblNombre1.BackColor = System.Drawing.Color.Transparent;
 
             this.txtNombre1.Name = "txtNombre1";
-            this.txtNombre1.Location = new Point(40, 121);
-            this.txtNombre1.Size = new Size(360, 30);
-            this.txtNombre1.Font = new Font("Courier New", 12F);
+            this.txtNombre1.Location = new System.Drawing.Point(40, 121);
+            this.txtNombre1.Size = new System.Drawing.Size(360, 30);
+            this.txtNombre1.Font = new System.Drawing.Font("Courier New", 12F);
             this.txtNombre1.Text = "Jugador 1";
-            this.txtNombre1.BorderStyle = BorderStyle.FixedSingle;
+            this.txtNombre1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             this.lblNombre2.Name = "lblNombre2";
             this.lblNombre2.Text = "NOMBRE DEL JUGADOR 2";
-            this.lblNombre2.Location = new Point(40, 180);
-            this.lblNombre2.Size = new Size(380, 23);
-            this.lblNombre2.ForeColor = Color.White;
-            this.lblNombre2.BackColor = Color.Transparent;
+            this.lblNombre2.Location = new System.Drawing.Point(40, 180);
+            this.lblNombre2.Size = new System.Drawing.Size(380, 23);
+            this.lblNombre2.ForeColor = System.Drawing.Color.White;
+            this.lblNombre2.BackColor = System.Drawing.Color.Transparent;
 
             this.txtNombre2.Name = "txtNombre2";
-            this.txtNombre2.Location = new Point(40, 207);
-            this.txtNombre2.Size = new Size(360, 30);
-            this.txtNombre2.Font = new Font("Courier New", 12F);
+            this.txtNombre2.Location = new System.Drawing.Point(40, 207);
+            this.txtNombre2.Size = new System.Drawing.Size(360, 30);
+            this.txtNombre2.Font = new System.Drawing.Font("Courier New", 12F);
             this.txtNombre2.Text = "Jugador 2";
-            this.txtNombre2.BorderStyle = BorderStyle.FixedSingle;
+            this.txtNombre2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             this.lblRival.Name = "lblRival";
             this.lblRival.Text = "OPONENTE: COMPUTADORA";
-            this.lblRival.Location = new Point(40, 180);
-            this.lblRival.Size = new Size(390, 28);
-            this.lblRival.ForeColor = Color.LightSkyBlue;
-            this.lblRival.BackColor = Color.Transparent;
+            this.lblRival.Location = new System.Drawing.Point(40, 180);
+            this.lblRival.Size = new System.Drawing.Size(390, 28);
+            this.lblRival.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.lblRival.BackColor = System.Drawing.Color.Transparent;
 
             this.pnlDados.Name = "pnlDados";
-            this.pnlDados.Location = new Point(475, 92);
-            this.pnlDados.Size = new Size(410, 265);
-            this.pnlDados.BackColor = Color.FromArgb(25, 43, 65);
-            this.pnlDados.BorderStyle = BorderStyle.FixedSingle;
+            this.pnlDados.Location = new System.Drawing.Point(475, 92);
+            this.pnlDados.Size = new System.Drawing.Size(410, 265);
+            this.pnlDados.BackColor = System.Drawing.Color.FromArgb(25, 43, 65);
+            this.pnlDados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             this.lblTituloDados.Name = "lblTituloDados";
             this.lblTituloDados.Text = "LANZAMIENTO DE DADOS";
-            this.lblTituloDados.Location = new Point(15, 12);
-            this.lblTituloDados.Size = new Size(380, 30);
-            this.lblTituloDados.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblTituloDados.ForeColor = Color.Gold;
-            this.lblTituloDados.Font = new Font("Georgia", 14F, FontStyle.Bold);
-            this.lblTituloDados.BackColor = Color.Transparent;
+            this.lblTituloDados.Location = new System.Drawing.Point(15, 12);
+            this.lblTituloDados.Size = new System.Drawing.Size(380, 30);
+            this.lblTituloDados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTituloDados.ForeColor = System.Drawing.Color.Gold;
+            this.lblTituloDados.Font = new System.Drawing.Font("Georgia", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTituloDados.BackColor = System.Drawing.Color.Transparent;
 
             this.lblDado1.Name = "lblDado1";
             this.lblDado1.Text = "-";
-            this.lblDado1.Location = new Point(72, 75);
-            this.lblDado1.Size = new Size(90, 90);
-            this.lblDado1.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblDado1.BackColor = Color.White;
-            this.lblDado1.ForeColor = Color.FromArgb(20, 25, 35);
-            this.lblDado1.Font = new Font("Georgia", 30F, FontStyle.Bold);
-            this.lblDado1.BorderStyle = BorderStyle.FixedSingle;
+            this.lblDado1.Location = new System.Drawing.Point(72, 75);
+            this.lblDado1.Size = new System.Drawing.Size(90, 90);
+            this.lblDado1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDado1.BackColor = System.Drawing.Color.White;
+            this.lblDado1.ForeColor = System.Drawing.Color.FromArgb(20, 25, 35);
+            this.lblDado1.Font = new System.Drawing.Font("Georgia", 30F, System.Drawing.FontStyle.Bold);
+            this.lblDado1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             this.lblDado2.Name = "lblDado2";
             this.lblDado2.Text = "-";
-            this.lblDado2.Location = new Point(245, 75);
-            this.lblDado2.Size = new Size(90, 90);
-            this.lblDado2.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblDado2.BackColor = Color.White;
-            this.lblDado2.ForeColor = Color.FromArgb(20, 25, 35);
-            this.lblDado2.Font = new Font("Georgia", 30F, FontStyle.Bold);
-            this.lblDado2.BorderStyle = BorderStyle.FixedSingle;
+            this.lblDado2.Location = new System.Drawing.Point(245, 75);
+            this.lblDado2.Size = new System.Drawing.Size(90, 90);
+            this.lblDado2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDado2.BackColor = System.Drawing.Color.White;
+            this.lblDado2.ForeColor = System.Drawing.Color.FromArgb(20, 25, 35);
+            this.lblDado2.Font = new System.Drawing.Font("Georgia", 30F, System.Drawing.FontStyle.Bold);
+            this.lblDado2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             this.pnlDados.Controls.Add(this.lblTituloDados);
             this.pnlDados.Controls.Add(this.lblDado1);
@@ -134,46 +134,46 @@ namespace ChronosArena
 
             this.btnLanzar.Name = "btnLanzar";
             this.btnLanzar.Text = "LANZAR DADOS";
-            this.btnLanzar.Location = new Point(40, 350);
-            this.btnLanzar.Size = new Size(245, 52);
-            this.btnLanzar.BackColor = Color.FromArgb(190, 145, 35);
-            this.btnLanzar.ForeColor = Color.Black;
-            this.btnLanzar.FlatStyle = FlatStyle.Flat;
-            this.btnLanzar.Font = new Font("Courier New", 12F, FontStyle.Bold);
+            this.btnLanzar.Location = new System.Drawing.Point(40, 350);
+            this.btnLanzar.Size = new System.Drawing.Size(245, 52);
+            this.btnLanzar.BackColor = System.Drawing.Color.FromArgb(190, 145, 35);
+            this.btnLanzar.ForeColor = System.Drawing.Color.Black;
+            this.btnLanzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLanzar.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
 
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Text = "El resultado mas alto decide quien comienza y elige la carta ambiente.";
-            this.lblEstado.Location = new Point(40, 420);
-            this.lblEstado.Size = new Size(840, 38);
-            this.lblEstado.ForeColor = Color.LightSkyBlue;
-            this.lblEstado.BackColor = Color.Transparent;
+            this.lblEstado.Location = new System.Drawing.Point(40, 420);
+            this.lblEstado.Size = new System.Drawing.Size(840, 38);
+            this.lblEstado.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.lblEstado.BackColor = System.Drawing.Color.Transparent;
 
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Text = "ATRAS";
-            this.btnAtras.Location = new Point(40, 470);
-            this.btnAtras.Size = new Size(150, 36);
-            this.btnAtras.BackColor = Color.FromArgb(65, 72, 90);
-            this.btnAtras.ForeColor = Color.White;
-            this.btnAtras.FlatStyle = FlatStyle.Flat;
+            this.btnAtras.Location = new System.Drawing.Point(40, 470);
+            this.btnAtras.Size = new System.Drawing.Size(150, 36);
+            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(65, 72, 90);
+            this.btnAtras.ForeColor = System.Drawing.Color.White;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Text = "CONTINUAR";
-            this.btnContinuar.Location = new Point(675, 466);
-            this.btnContinuar.Size = new Size(205, 40);
-            this.btnContinuar.BackColor = Color.FromArgb(32, 130, 90);
-            this.btnContinuar.ForeColor = Color.White;
-            this.btnContinuar.FlatStyle = FlatStyle.Flat;
+            this.btnContinuar.Location = new System.Drawing.Point(675, 466);
+            this.btnContinuar.Size = new System.Drawing.Size(205, 40);
+            this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(32, 130, 90);
+            this.btnContinuar.ForeColor = System.Drawing.Color.White;
+            this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Enabled = false;
 
-            this.AutoScaleMode = AutoScaleMode.None;
-            this.ClientSize = new Size(920, 520);
-            this.MinimumSize = new Size(860, 500);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(920, 520);
+            this.MinimumSize = new System.Drawing.Size(860, 500);
             this.Name = "FormPrePartida";
-            this.StartPosition = FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CHRONOS ARENA - ANTES DE INICIAR";
-            this.BackColor = Color.FromArgb(15, 31, 50);
-            this.ForeColor = Color.White;
-            this.Font = new Font("Courier New", 9F);
+            this.BackColor = System.Drawing.Color.FromArgb(15, 31, 50);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Font = new System.Drawing.Font("Courier New", 9F);
 
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNombre1);
